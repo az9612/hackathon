@@ -1,6 +1,4 @@
 <template>
-  <div class="container-fluid">
-      <AppNavbar/>
   <div class="container-fluid px-3 py-4">
     <!-- Hero Section -->
     <section class="hero-banner text-center py-5">
@@ -9,16 +7,16 @@
     </section>
 
     <!-- Accordion Container -->
-    <div class="accordion w-75 mx-auto" id="infoAccordion">
+    <div class="accordion-container">
       <InfoCard 
         title="Visa Application"
         :steps="visaSteps"
-        linkPath="/visa-Application"
+        linkPath="/visa-application"
       />
       <InfoCard 
         title="Residence Registration"
         :steps="registrationSteps"
-        linkPath="/residence-Registration"
+        linkPath="/residence-registration"
       />
       <InfoCard 
         title="Health Insurance"
@@ -28,12 +26,12 @@
       <InfoCard 
         title="Bank Account"
         :steps="bankSteps"
-        linkPath="/bank-Account"
+        linkPath="/bank-account"
       />
     </div>
 
     <!-- Emergency Contacts -->
-    <section class="emergency-contacts p-4 w-75 mx-auto mt-4">
+    <section class="emergency-contacts">
       <h2 class="text-center mb-3">Important Contacts</h2>
       <ul class="list-unstyled text-center">
         <li><strong>Police:</strong> 110</li>
@@ -42,24 +40,16 @@
       </ul>
     </section>
   </div>
-  </div>
-
 </template>
 
 <script>
 import InfoCard from './components/InfoCard.vue';
-import AppNavbar from './components/AppNavbar.vue';
 
 export default {
-
-    name: 'FirstStep',
-    components: { 
-        InfoCard,
-        AppNavbar
-     },
-    data() {
-        return {
-        visaSteps: [
+  components: { InfoCard },
+  data() {
+    return {
+      visaSteps: [
         'Determine which visa type you need',
         'Gather required documents',
         'Schedule an appointment at the embassy',
@@ -84,8 +74,8 @@ export default {
         'Open account (often free for students)',
         'Set up online banking'
       ]
-        }
     }
+  }
 }
 </script>
 
@@ -98,12 +88,19 @@ export default {
   color: white;
 }
 
+.accordion-container {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
 .emergency-contacts {
   background: #fff8f8;
   border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 500px;
+  margin: 2rem auto 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-banner {
     padding: 1.5rem !important;
@@ -112,12 +109,9 @@ export default {
     margin-right: -0.75rem;
   }
   
-  .accordion, .emergency-contacts {
+  .accordion-container,
+  .emergency-contacts {
     width: 95% !important;
-  }
-  
-  h1.display-4 {
-    font-size: 2rem;
   }
 }
 </style>
