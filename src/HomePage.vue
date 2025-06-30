@@ -1,25 +1,22 @@
 <template>
   <div id="app">
     <AppNavbar/>
-    <JumboTron/>
     <ChatbotPopup/>
     <RegistrationBar/>
-    <router-view/>
 
   </div>
 </template>
 
 <script>
 import AppNavbar from './components/AppNavbar.vue';
-import JumboTron from './components/JumboTron.vue';
+// import JumboTron from './components/JumboTron.vue';
 import ChatbotPopup from './components/ChatbotPopup.vue';
 import RegistrationBar from './components/RegistrationBar.vue';
 
 export default {
-  name: 'App',
+  name: 'HomePage',
   components: {
     AppNavbar,
-    JumboTron,
     ChatbotPopup,
     RegistrationBar
   }
