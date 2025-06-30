@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid px-3 py-4">
+  <div class="container-fluid">
+    <AppNavbar />
     <!-- Hero Section -->
     <section class="hero-banner text-center py-5">
       <h1 class="display-4">Welcome to Germany</h1>
@@ -44,9 +45,13 @@
 
 <script>
 import InfoCard from './components/InfoCard.vue';
+import AppNavbar from './components/AppNavbar.vue';
 
 export default {
-  components: { InfoCard },
+  components: { 
+    InfoCard,
+    AppNavbar
+    },
   data() {
     return {
       visaSteps: [
