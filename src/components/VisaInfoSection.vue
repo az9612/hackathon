@@ -1,11 +1,13 @@
 <template>
-  <section class="visa-info-section mb-5">
-    <h2 class="section-title mb-4">{{ title }}</h2>
+  <section class="visa-info-section">
+    <h2 class="section-title">{{ title }}</h2>
     
-    <div class="requirement-item" v-for="(item, index) in items" :key="index">
-      <h3 class="item-title">{{ item.title }}</h3>
-      <p class="item-description">{{ item.description }}</p>
-    </div>
+    <dl class="definition-list">
+      <div v-for="(item, index) in items" :key="index" class="definition-item">
+        <dt class="term">{{ item.title }}</dt>
+        <dd class="description">{{ item.description }}</dd>
+      </div>
+    </dl>
   </section>
 </template>
 
@@ -26,52 +28,54 @@ export default {
 
 <style scoped>
 .visa-info-section {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #2c3e50;
-  position: relative;
+  margin-bottom: 1rem;
   padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: #6097d6;
+.definition-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 1.5rem;
 }
 
-.requirement-item {
-  margin-bottom: 1.5rem;
+.definition-item {
+  display: contents;
 }
 
-.item-title {
-  font-size: 1.1rem;
+.term {
   font-weight: 500;
   color: #34495e;
-  margin-bottom: 0.5rem;
+  grid-column: 1;
 }
 
-.item-description {
+.description {
   color: #7f8c8d;
   line-height: 1.6;
-  margin-bottom: 0;
+  margin: 0;
+  grid-column: 2;
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.3rem;
+  .definition-list {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
   
-  .item-title {
-    font-size: 1rem;
+  .term, .description {
+    grid-column: 1;
+  }
+  
+  .term {
+    margin-top: 0.75rem;
+    font-weight: 600;
   }
 }
 </style>
