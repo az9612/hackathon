@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .hero-banner {
-  background: #6097d6;
+  background: powderblue;
   border-radius: 20px;
   margin: 1rem;
   padding: 2rem;
