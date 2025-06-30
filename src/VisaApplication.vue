@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import VisaInfoSection from './components/VisaInfoSection.vue'
+// import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
 
 export default {
   components: { 
-    VisaInfoSection,
+    // VisaInfoSection,
     AppNavbar
    }
 }

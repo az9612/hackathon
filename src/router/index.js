@@ -8,9 +8,9 @@ import VisaApplication from '../VisaApplication.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/first', component: FirstStep },
-  {path: '/study', component: StudyPage },
-  {path: '/visa', component: VisaApplication}
+  { name: 'Visa Application', path: '/visa', content: 'Apply for visa, documents, process', component: VisaApplication },
+  { name: 'Study in Germany', path: '/study', content: 'Study programs, universities, application', component: StudyPage },
+  { name: 'First Steps', path: '/first', content: 'Registration, apartment, insurance', component: FirstStep },
 ]
 
 const router = createRouter({

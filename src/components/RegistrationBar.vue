@@ -5,38 +5,43 @@
     :key="index"
     :ref="el => cardRefs[index] = el"
   >
+    <!-- Card -->
     <div
-      class="card shadow position-relative text-dark"
-      :style="{ height: '100px', backgroundColor: card.bgColor }"
+      class="card shadow position-relative"
+      :style="{ height: '7rem', backgroundColor: card.bgColor }"
     >
-      <!-- Clickable overlay -->
+      <!-- Dropdown toggle overlay -->
       <div
         class="position-absolute top-0 start-0 w-100 h-100"
         style="z-index: 1; cursor: pointer;"
         @click.stop="toggleDropdown(index)"
       ></div>
-        <!-- Floating image (decorative) -->
-        <img
-          :src="card.imgSrc"
-          alt="icon"
-          class="d-block float-end ms-2"
-          style="width: 50px; opacity: 0.3;"
-        >
-      <!-- Card content -->
-      <div class="card-body d-flex justify-content-between align-items-center h-100">
-        <h5 class="card-title mb-0">{{ card.title }}</h5>
 
+      <!-- Card layout with Bootstrap row -->
+      <div class="row g-0 h-100">
+        <!-- Text content (left side) -->
+        <div class="col d-flex align-items-center ps-3">
+          <h5 class="card-title mb-0">{{ card.title }}</h5>
+        </div>
 
+        <!-- Image and icon (right side) -->
+        <div class="col-auto d-flex align-items-center position-relative pe-3">
+          <!-- Background image -->
+          <img
+            :src="card.imgSrc"
+            alt="card image"
+            style="height: 100%; opacity: 0.75; position: absolute; right: 0; width: 100; object-fit: fill;"
+          />
 
-        <!-- Navigation arrow -->
-        <router-link
-          :to="card.route"
-          class="btn btn-light text-danger fw-bold z-2"
-          style="z-index: 2;"
-          @click.stop
-        >
-          &gt;
-        </router-link>
+          <!-- Navigation button -->
+          <router-link
+            :to="card.route"
+            class="btn btn-light text-danger fw-bold z-2 position-relative"
+            @click.stop
+          >
+            &gt;
+          </router-link>
+        </div>
       </div>
     </div>
 
@@ -52,9 +57,12 @@
 </template>
 
 
-
 <script>
 import { onMounted, onBeforeUnmount, reactive, ref } from 'vue';
+import innenhafenImg from '@/assets/innenhafen.jpg';
+import libraryimg from '@/assets/library.jpg';
+import zollimg from '@/assets/zoll.jpg';
+import tigerImg from '@/assets/tiger.jpg';
 
 export default {
   setup() {
@@ -62,7 +70,7 @@ export default {
       {
         title: 'Welcome to Germany',
         bgColor: 'peachpuff',
-        imgSrc: 'src\assets\innenhafen.jpg',
+        imgSrc: innenhafenImg,
         dropdown: [
                   { label: 'Visa Application', path: '/visa' },
                   { label: 'Residence Registration', path: '/registration' },
@@ -77,6 +85,7 @@ export default {
       {
         title: 'Study in UDE',
         bgColor: 'powderblue',
+        imgSrc: libraryimg,
         dropdown: [
                   { label: 'Einschreibung (Enrollment)', path: '/visa' },
                   { label: 'Uni DUE Online Services', path: '/registration' },
@@ -89,6 +98,7 @@ export default {
       {
         title: 'Accommodation',
         bgColor: 'palevioletred',
+        imgSrc: zollimg,
         dropdown: [
                   { label: 'Apply', path: '/visa' },
                   { label: 'Check availability', path: '/registration' },
@@ -100,6 +110,7 @@ export default {
       {
         title: 'Fun stuff',
         bgColor: 'lightyellow',
+        imgSrc: tigerImg,
         dropdown: [
                   { label: 'Clubs', path: '/visa' },
                   { label: 'Events', path: '/registration' },
@@ -159,7 +170,7 @@ export default {
 
 .dropdown-menu {
   position: absolute;
-  z-index: 1050;
+  z-index: 10;
   display: block;
   margin-top: 0.25rem;
   background-color: white;
