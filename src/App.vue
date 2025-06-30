@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <AppNavbar/>
+    <JumboTron/>
+    <ChatbotPopup/>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppNavbar from './components/AppNavbar.vue';
+import JumboTron from './components/JumboTron.vue';
+import ChatbotPopup from './components/ChatbotPopup.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppNavbar,
+    JumboTron,
+    ChatbotPopup
   }
 }
 </script>
@@ -21,6 +29,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
