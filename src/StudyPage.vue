@@ -3,7 +3,7 @@
     <AppNavbar />
     <!-- Hero Section -->
     <section class="hero-banner text-center py-5">
-      <h1 class="display-4">Welcome to Universtiy Duisburg-Essen</h1>
+      <h1 class="display-4">Welcome to University Duisburg-Essen</h1>
       <p class="lead">Essential information for your first Semester</p>
     </section>
 
@@ -55,9 +55,9 @@ export default {
   data() {
     return {
       einschreibenSteps: [
-        'Documents - Insurance',
-        'Languangue Certificate (English or German)',
-        'Registration office in SG Building',
+        'Prepare the documents',
+        'Email the enrollment office with attachments',
+        'Pay semester fee after being officially enrolled',
         'Attend O-Woche (Orientation Week)',
         
       ],
@@ -69,11 +69,10 @@ export default {
         'myUDE App'
       ],
       examsSteps: [
-        'Where to find exam dates',
         'How to register for exams',
+        'Where to find exam dates',
         'German language course',
-        'module handbook and exam regulations',
-        'ECTS credits and grading system'
+        'Module handbook and exam regulations'
       ],
       linkSteps: [
         'link 1',
