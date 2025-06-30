@@ -3,6 +3,7 @@
     <AppNavbar/>
     <JumboTron/>
     <ChatbotPopup/>
+    <RegistrationBar/>
 
   </div>
 </template>
@@ -11,13 +12,15 @@
 import AppNavbar from './components/AppNavbar.vue';
 import JumboTron from './components/JumboTron.vue';
 import ChatbotPopup from './components/ChatbotPopup.vue';
+import RegistrationBar from './components/RegistrationBar.vue';
 
 export default {
   name: 'App',
   components: {
     AppNavbar,
     JumboTron,
-    ChatbotPopup
+    ChatbotPopup,
+    RegistrationBar
   }
 }
 </script>
