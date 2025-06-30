@@ -1,14 +1,14 @@
 <template>
   <div
-    class="container my-5"
+    class="container my-3"
     v-for="(card, index) in cards"
     :key="index"
     :ref="el => cardRefs[index] = el"
   >
     <!-- Card container with relative positioning -->
     <div
-      class="card bg-danger opacity-75 shadow text-white position-relative"
-      style="height: 100px;"
+      class="card shadow position-relative"
+      :style="{height: '100px', backgroundColor: card.bgColor}"
     >
       <!-- Clickable overlay for toggling dropdown -->
       <div
@@ -35,11 +35,12 @@
 
     <!-- Dropdown -->
     <transition name="slidefade">
-      <ul v-if="card.open" class="dropdown-menu w-75">
-        <li v-for="(item, i) in card.dropdown" :key="i">
-          <a class="dropdown-item" href="#">{{ item }}</a>
-        </li>
-      </ul>
+<ul v-if="card.open" class="dropdown-menu w-75">
+  <li v-for="(item, i) in card.dropdown" :key="i">
+    <router-link class="dropdown-item" :to="item.path">{{ item.label }}</router-link>
+  </li>
+</ul>
+
     </transition>
   </div>
 </template>
@@ -53,24 +54,35 @@ export default {
     const cards = reactive([
       {
         title: 'Welcome to Germany',
-        dropdown: ['Residence Registration', 'Bank Account', 'Health Insurance', 'Learning German'],
+        bgColor: 'aquamarine',
+        dropdown: [
+                  { label: 'Visa Application', path: '/visa' },
+                  { label: 'Residence Registration', path: '/registration' },
+                  { label: 'Bank Account', path: '/bank' },
+                  { label: 'Health Insurance', path: '/insurance' },
+                  { label: 'Learning German', path: '/german' }
+                  ],
+
         route: '/first',
         open: false,
       },
       {
         title: 'Study in UDE',
+        bgColor: 'mediumseagreen',
         dropdown: ['Einschreibung (Enrollment)', 'Uni DUE Online Services', 'Exams', 'Relevant Links'],
         route: '/study',
         open: false,
       },
       {
         title: 'Accommodation',
+        bgColor: 'tomato',
         dropdown: ['Apply', 'Check availability', 'Cancel booking'],
         route: '/accommodation',
         open: false,
       },
       {
         title: 'Fun stuff',
+        bgColor: 'lightyellow',
         dropdown: ['Clubs', 'Events', 'Sports'],
         route: '/fun',
         open: false,

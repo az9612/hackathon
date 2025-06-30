@@ -1,5 +1,6 @@
 <template>
-  <div class="container-fluid px-3 py-4">
+  <div class="container-fluid">
+    <AppNavbar />
     <section class="page-header text-center py-4 mb-4">
       <h1 class="display-5">Visa Application Requirements</h1>
       <router-link to="/" class="btn btn-outline-secondary">
@@ -29,9 +30,13 @@
 
 <script>
 import VisaInfoSection from './components/VisaInfoSection.vue'
+import AppNavbar from './components/AppNavbar.vue';
 
 export default {
-  components: { VisaInfoSection }
+  components: { 
+    VisaInfoSection,
+    AppNavbar
+   }
 }
 </script>
 

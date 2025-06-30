@@ -12,7 +12,7 @@
       <InfoCard 
         title="Visa Application"
         :steps="visaSteps"
-        linkPath="/visa-application"
+        linkPath="/visa"
       />
       <InfoCard 
         title="Residence Registration"
