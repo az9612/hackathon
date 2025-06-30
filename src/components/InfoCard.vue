@@ -2,20 +2,23 @@
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button 
-        class="accordion-button collapsed" 
-        type="button" 
-        @click="toggleAccordion"
+        class="accordion-button"
+        type="button"
+        @click="isOpen = !isOpen"
         :class="{ 'collapsed': !isOpen }"
       >
         {{ title }}
+        <span class="accordion-icon">{{ isOpen ? '−' : '+' }}</span>
       </button>
     </h2>
-    <div class="accordion-collapse" :class="{ 'show': isOpen }">
+    <div 
+      class="accordion-collapse"
+      :class="{ 'show': isOpen }"
+      v-show="isOpen"
+    >
       <div class="accordion-body">
         <ol class="steps-list">
-          <li v-for="(step, index) in steps" :key="index">
-            {{ step }}
-          </li>
+          <li v-for="(step, index) in steps" :key="index">{{ step }}</li>
         </ol>
         <router-link 
           :to="linkPath" 
@@ -41,33 +44,60 @@ export default {
     return {
       isOpen: false
     }
-  },
-  methods: {
-    toggleAccordion() {
-      this.isOpen = !this.isOpen;
-    }
   }
 }
 </script>
 
 <style scoped>
 .accordion-item {
-  margin-bottom: 10px;
-  border: 1px solid rgba(0,0,0,0.125);
-  border-radius: 0.25rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .accordion-button {
+  width: 100%;
+  padding: 1rem 1.25rem;
   background-color: #f8f9fa;
+  border: none;
   font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
 }
 
-.accordion-button:not(.collapsed) {
-  background-color: #e7f1ff;
-  color: #0c63e4;
+.accordion-button:hover {
+  background-color: #e9ecef;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.accordion-collapse {
+  background: white;
+}
+
+.accordion-body {
+  padding: 1rem 1.25rem;
 }
 
 .steps-list {
   padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.btn-outline-primary {
+  border-color: #6097d6;
+  color: #6097d6;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6097d6;
+  color: white;
 }
 </style>
