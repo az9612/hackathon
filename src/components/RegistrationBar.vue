@@ -70,11 +70,7 @@ export default {
       {
         title: 'Welcome to Germany',
         bgColor: 'peachpuff',
-<<<<<<< HEAD
-        imgSrc: 'src/assets/innenhafen.jpg',
-=======
         imgSrc: innenhafenImg,
->>>>>>> 8d19e33a7bf55e25c3f09d90cce549faab816537
         dropdown: [
                   { label: 'Visa Application', path: '/visa' },
                   { label: 'Residence Registration', path: '/registration' },
