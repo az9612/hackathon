@@ -2,32 +2,32 @@
   <div class="container-fluid">
     <AppNavbar />
     <!-- Hero Section -->
-    <section class="hero-banner text-center text-white  py-5">
-      <h1 class="display-1">Welcome to Germany!</h1>
-      <p class="lead">Essential information for your first weeks</p>
+    <section class="hero-banner text-center py-5">
+      <h1 class="display-4">Welcome to Universtiy Duisburg-Essen</h1>
+      <p class="lead">Essential information for your first Semester</p>
     </section>
 
     <!-- Accordion Container -->
     <div class="accordion-container">
       <InfoCard 
-        title="Visa Application"
-        :steps="visaSteps"
-        linkPath="/visa-application"
+        title="Einschreibung (Enrollment)"
+        :steps="einschreibenSteps"
+        linkPath="/einschreibungPage"
       />
       <InfoCard 
-        title="Residence Registration"
-        :steps="registrationSteps"
-        linkPath="/residence-registration"
+        title="Uni DUE Online Services"
+        :steps="onlineServicesSteps"
+        linkPath="/onlineServicesPage"
       />
       <InfoCard 
-        title="Health Insurance"
-        :steps="insuranceSteps"
-        linkPath="/health-insurance"
+        title="Exams"
+        :steps="examsSteps"
+        linkPath="/examsPage"
       />
       <InfoCard 
-        title="Bank Account"
-        :steps="bankSteps"
-        linkPath="/bank-account"
+        title="Relevant Links"
+        :steps="linkSteps"
+        linkPath="/linksPage"
       />
     </div>
 
@@ -54,30 +54,32 @@ export default {
     },
   data() {
     return {
-      visaSteps: [
-        'Gather the required documents',
-        'Schedule an appointment at the local foreign`s office ',
-        'Attend visa appointment',
-        'Wait for processing'
+      einschreibenSteps: [
+        'Documents - Insurance',
+        'Languangue Certificate (English or German)',
+        'Registration office in SG Building',
+        'Attend O-Woche (Orientation Week)',
+        
       ],
-      registrationSteps: [
-        'Find accommodation',
-        'Book appointment with Resident`s Registration Office',
-        'Prepare the documentation',
-        'Attend the appointment',
-        'Receive the proof of residence Meldebescheinigung'
+      onlineServicesSteps: [
+        'HisInOne',
+        'LSF',
+        'Moodle',
+        'Webmail',
+        'myUDE App'
       ],
-      insuranceSteps: [
-        'Choose between public or private insurance',
-        'Compare providers (TK, AOK, etc.)',
-        'Sign up within first 3 months',
-        'Receive your insurance card'
+      examsSteps: [
+        'Where to find exam dates',
+        'How to register for exams',
+        'German language course',
+        'module handbook and exam regulations',
+        'ECTS credits and grading system'
       ],
-      bankSteps: [
-        'Choose a bank (Sparkasse, Deutsche Bank, etc.)',
-        'Prepare the documents',
-        'Open account (often free for students)',
-        'Set up online banking'
+      linkSteps: [
+        'link 1',
+        'Link 2',
+        'Link 3',
+        'Link 4'
       ]
     }
   }

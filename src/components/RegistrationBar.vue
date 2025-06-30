@@ -58,8 +58,8 @@ export default {
         open: false,
       },
       {
-        title: 'Study',
-        dropdown: ['Courses', 'Grades', 'Schedule'],
+        title: 'Study in UDE',
+        dropdown: ['Einschreibung (Enrollment)', 'Uni DUE Online Services', 'Exams', 'Relevant Links'],
         route: '/study',
         open: false,
       },
