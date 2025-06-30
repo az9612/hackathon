@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <AppNavbar />
     <!-- Hero Section -->
-    <section class="hero-banner text-center text-dark  py-5">
+    <section class="hero-banner text-center text-white  py-5">
       <h1 class="display-1">Welcome to Germany!</h1>
       <p class="lead">Essential information for your first weeks</p>
     </section>
@@ -17,17 +17,17 @@
       <InfoCard 
         title="Residence Registration"
         :steps="registrationSteps"
-        linkPath="/residence-registration"
+        linkPath="/resireg"
       />
       <InfoCard 
         title="Health Insurance"
         :steps="insuranceSteps"
-        linkPath="/health-insurance"
+        linkPath="/health"
       />
       <InfoCard 
         title="Bank Account"
         :steps="bankSteps"
-        linkPath="/bank-account"
+        linkPath="/bank"
       />
     </div>
 
@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .hero-banner {
-  background: peachpuff;
+  background: #6097d6;
   border-radius: 20px;
   margin-bottom: 2rem;
   padding: 2rem;

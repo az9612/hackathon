@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <AppNavbar />
     <section class="page-header text-center py-4 mb-4">
-      <h1 class="display-5 text-left">Visa Application</h1>
+      <h1 class="display-5 text-left"></h1>
       <router-link to="/" class="btn btn-outline-secondary">
         ← Back to Homepage
       </router-link>
@@ -11,33 +11,30 @@
     <div class="requirements-container">
       <!-- University Admission Section -->
       <div class="section">
-        <h2 class="text-left">Visa Appointment</h2>
+        <h2 class="text-left">Residence Registration</h2>
+        <h5 class="definition-item text-left">Everyone who moves to Germany must register at their new place of residence within 14 days. If the city administration does not provide any appointments within 14 days, please schedule the earliest possible appointment. </h5>
         <div class="definition-item">
           <span class="term text-left">Duisburg</span>
-          <span class="description text-left">Fill in online application at the
-            <a href="https://www.duisburg.de/allgemein/fachbereiche/33/online-antraege-der-auslaenderbehoerde.php#/#bueOverview" target="_blank"> Foreign's office website</a>. UDE students can also contact the Immigration Office Duisburg directly on Tuesday every 2 weeks via this 
-            <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzAwNzQ0NGItMDY5Yi00YmUxLWE1MTUtMTMwYjQxYjY3NjE3%40thread.v2/0?context=%7b%22Tid%22%3a%221fe81f8a-14a2-4f29-a738-2f3ffcb77915%22%2c%22Oid%22%3a%22d6cbd25d-e7c0-47f9-840d-98c68132ce64%22%7d" target="_blank">link.</a> You can contact the Talent Center of the City of Duisburg via the following email address: 
-            <span class="text-primary">talent-center@stadt-duisburg.de</span></span>
+          <span class="description text-left">All international students can register with the Citizens' Service (Bürgeramt) of the City of Duisburg. Please schedule an appointment   
+            <a href="http://www.duisburg.de/allgemein/fachbereiche/90/terminvereinbarung-buergerservice.php" target="_blank">here</a> (see "Anmeldung von ausländischen Staatsangehörigen").
+            </span>
         </div>
         <div class="definition-item">
           <span class="term text-left">Essen</span>
-          <span class="description text-left">Please schedule appointments via email: 
+          <span class="description text-left">Citizens of EU and EEA member states can schedule their appointments 
+            <a href="https://termine.essen.de/?link=3211" target="_blank">here</a> (see "Anmeldung in Essen") and go to the so-called Bürgeramt. Citizens of other states need to contact the Immigration Office via email.  
             <span class="text-primary">studententermine@abh.essen.de</span></span>
         </div>
         <div class="definition-item">
-          <span class="term text-left">Mülhein an der Ruhr</span>
+          <span class="term text-left">Mülheim an der Ruhr</span>
           <span class="description text-left">Please schedule appointments
-            <a href="https://terminvergabe.muelheim-ruhr.de/select2?md=9">online</a></span>
+            <a href="https://terminvergabe.muelheim-ruhr.de/select2?md=9 " target="_blank">online</a></span>
         </div>
         <div class="definition-item">
           <span class="term text-left">Typical documents needed</span>
-          <span class="description text-left">Letter of Admission </span>
-          <span class="description text-left">Proof of Financing</span>
-          <span class="description text-left">Proof of Health Insurance </span>
-          <span class="description text-left">Rental Agreement</span>
-          <span class="description text-left">Letter of tenancy (Wohnungsgeberbescheinigung)</span>
           <span class="description text-left">Passport</span>
-          <span class="description text-left">Passport Photo</span>
+          <span class="description text-left">Letter of tenancy (Wohnungsgeberbescheinigung)</span>
+          <span class="description text-left">Current certificate of enrolment</span>
         </div>
       </div>
     </div>
