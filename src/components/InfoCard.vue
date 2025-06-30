@@ -88,7 +88,8 @@ export default {
 
 .steps-list {
   padding-left: 20px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  text-align: left;
 }
 
 .btn-outline-primary {

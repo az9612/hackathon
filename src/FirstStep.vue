@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid px-3 py-4">
     <!-- Hero Section -->
-    <section class="hero-banner text-center py-5">
-      <h1 class="display-4">Welcome to Germany</h1>
+    <section class="hero-banner text-center text-white  py-5">
+      <h1 class="display-1">Welcome to Germany!</h1>
       <p class="lead">Essential information for your first weeks</p>
     </section>
 
@@ -50,17 +50,17 @@ export default {
   data() {
     return {
       visaSteps: [
-        'Determine which visa type you need',
-        'Gather required documents',
-        'Schedule an appointment at the embassy',
-        'Attend visa interview',
+        'Gather the required documents',
+        'Schedule an appointment at the local foreign`s office ',
+        'Attend visa appointment',
         'Wait for processing'
       ],
       registrationSteps: [
         'Find accommodation',
-        'Book Anmeldung appointment',
-        'Bring passport and rental contract',
-        'Receive Meldebescheinigung'
+        'Book appointment with Resident`s Registration Office',
+        'Prepare the documentation',
+        'Attend the appointment',
+        'Receive the proof of residence Meldebescheinigung'
       ],
       insuranceSteps: [
         'Choose between public or private insurance',
@@ -70,7 +70,7 @@ export default {
       ],
       bankSteps: [
         'Choose a bank (Sparkasse, Deutsche Bank, etc.)',
-        'Prepare passport and Anmeldung',
+        'Prepare the documents',
         'Open account (often free for students)',
         'Set up online banking'
       ]
