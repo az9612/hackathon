@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <AppNavbar />
     <!-- Hero Section -->
-    <section class="hero-banner text-center py-5">
+    <section class="hero-banner text-center text-dark py-5">
       <h1 class="display-4">Welcome to Universtiy Duisburg-Essen</h1>
       <p class="lead">Essential information for your first Semester</p>
     </section>
@@ -88,7 +88,7 @@ export default {
 
 <style scoped>
 .hero-banner {
-  background: #6097d6;
+  background: powderblue;
   border-radius: 20px;
   margin-bottom: 2rem;
   padding: 2rem;
