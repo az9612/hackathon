@@ -45,12 +45,20 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 //import VisaInfoSection from './components/VisaInfoSection.vue'
+=======
+// import VisaInfoSection from './components/VisaInfoSection.vue'
+>>>>>>> 8d19e33a7bf55e25c3f09d90cce549faab816537
 import AppNavbar from './components/AppNavbar.vue';
 
 export default {
   components: { 
+<<<<<<< HEAD
     //VisaInfoSection,
+=======
+    // VisaInfoSection,
+>>>>>>> 8d19e33a7bf55e25c3f09d90cce549faab816537
     AppNavbar
    }
 }

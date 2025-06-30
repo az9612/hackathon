@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div id="app">
     <AppNavbar />
     <!-- Hero Section -->
     <section class="hero-banner text-center text-white  py-5">
@@ -88,7 +88,7 @@ export default {
 .hero-banner {
   background: #6097d6;
   border-radius: 20px;
-  margin-bottom: 2rem;
+  margin: 1rem;
   padding: 2rem;
   color: white;
 }

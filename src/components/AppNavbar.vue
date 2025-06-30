@@ -28,18 +28,90 @@
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+<form class="d-flex position-relative" role="search" @submit.prevent="goToSelectedPage">
+  <input
+    class="form-control me-2"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    v-model="searchQuery"
+    @input="filterSuggestions"
+    @keydown.down.prevent="highlightNext"
+    @keydown.up.prevent="highlightPrev"
+    @keydown.enter.prevent="goToHighlightedPage"
+  />
+  <button class="btn btn-outline-success" type="submit">Search</button>
+
+  <!-- Autocomplete suggestions -->
+  <ul class="list-group position-absolute mt-5 w-100" style="z-index: 9999;" v-if="filteredPages.length">
+    <li
+      v-for="(page, index) in filteredPages"
+      :key="page.path"
+      class="list-group-item list-group-item-action"
+      :class="{ active: index === highlightedIndex }"
+      @click="goToPage(page.path)"
+    >
+      {{ page.name }}
+    </li>
+  </ul>
+</form>
+
     </div>
   </div>
 </nav>
 </template>
 
 <script>
+// import { useRouter } from 'vue-router';
 export default {
   name: 'AppNavbar',
+    data() {
+    return {
+      searchQuery: '',
+      filteredPages: [],
+      highlightedIndex: -1
+    }
+  },
+  computed: {
+    allNamedRoutes() {
+      return this.$router.options.routes.filter(route => route.name)
+    }
+  },
+methods: {
+  filterSuggestions() {
+    const query = this.searchQuery.toLowerCase()
+    this.filteredPages = query
+      ? this.allNamedRoutes.filter(p => p.name.toLowerCase().includes(query))
+      : []
+    this.highlightedIndex = -1
+  },
+  goToPage(path) {
+    this.$router.push(path)
+    this.searchQuery = ''
+    this.filteredPages = []
+  },
+  goToSelectedPage() {
+    if (this.filteredPages.length > 0) {
+      this.goToPage(this.filteredPages[0].path)
+    }
+  },
+  highlightNext() {
+    if (this.highlightedIndex < this.filteredPages.length - 1) {
+      this.highlightedIndex++
+    }
+  },
+  highlightPrev() {
+    if (this.highlightedIndex > 0) {
+      this.highlightedIndex--
+    }
+  },
+  goToHighlightedPage() {
+    if (this.highlightedIndex >= 0) {
+      this.goToPage(this.filteredPages[this.highlightedIndex].path)
+    }
+  }
+}
+
 }
 </script>
 
