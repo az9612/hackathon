@@ -1,27 +1,34 @@
 <template>
   <div
-    class="container my-5"
+    class="container my-3"
     v-for="(card, index) in cards"
     :key="index"
     :ref="el => cardRefs[index] = el"
   >
-    <!-- Card container with relative positioning -->
     <div
-      class="card bg-danger opacity-75 shadow text-white position-relative"
-      style="height: 100px;"
+      class="card shadow position-relative text-dark"
+      :style="{ height: '100px', backgroundColor: card.bgColor }"
     >
-      <!-- Clickable overlay for toggling dropdown -->
+      <!-- Clickable overlay -->
       <div
         class="position-absolute top-0 start-0 w-100 h-100"
         style="z-index: 1; cursor: pointer;"
         @click.stop="toggleDropdown(index)"
       ></div>
-
+        <!-- Floating image (decorative) -->
+        <img
+          :src="card.imgSrc"
+          alt="icon"
+          class="d-block float-end ms-2"
+          style="width: 50px; opacity: 0.3;"
+        >
       <!-- Card content -->
       <div class="card-body d-flex justify-content-between align-items-center h-100">
         <h5 class="card-title mb-0">{{ card.title }}</h5>
 
-        <!-- Navigation arrow on the right -->
+
+
+        <!-- Navigation arrow -->
         <router-link
           :to="card.route"
           class="btn btn-light text-danger fw-bold z-2"
@@ -37,12 +44,13 @@
     <transition name="slidefade">
       <ul v-if="card.open" class="dropdown-menu w-75">
         <li v-for="(item, i) in card.dropdown" :key="i">
-          <a class="dropdown-item" href="#">{{ item }}</a>
+          <router-link class="dropdown-item" :to="item.path">{{ item.label }}</router-link>
         </li>
       </ul>
     </transition>
   </div>
 </template>
+
 
 
 <script>
@@ -53,25 +61,50 @@ export default {
     const cards = reactive([
       {
         title: 'Welcome to Germany',
-        dropdown: ['Residence Registration', 'Bank Account', 'Health Insurance', 'Learning German'],
+        bgColor: 'peachpuff',
+        imgSrc: 'src\assets\innenhafen.jpg',
+        dropdown: [
+                  { label: 'Visa Application', path: '/visa' },
+                  { label: 'Residence Registration', path: '/registration' },
+                  { label: 'Bank Account', path: '/bank' },
+                  { label: 'Health Insurance', path: '/insurance' },
+                  { label: 'Learning German', path: '/german' }
+                  ],
+
         route: '/first',
         open: false,
       },
       {
         title: 'Study in UDE',
-        dropdown: ['Einschreibung (Enrollment)', 'Uni DUE Online Services', 'Exams', 'Relevant Links'],
+        bgColor: 'powderblue',
+        dropdown: [
+                  { label: 'Einschreibung (Enrollment)', path: '/visa' },
+                  { label: 'Uni DUE Online Services', path: '/registration' },
+                  { label: 'Exams', path: '/bank' },
+                  { label: 'Relevant Links', path: '/insurance' },
+                  ],
         route: '/study',
         open: false,
       },
       {
         title: 'Accommodation',
-        dropdown: ['Apply', 'Check availability', 'Cancel booking'],
+        bgColor: 'palevioletred',
+        dropdown: [
+                  { label: 'Apply', path: '/visa' },
+                  { label: 'Check availability', path: '/registration' },
+                  { label: 'Cancel booking', path: '/bank' },
+                  ],
         route: '/accommodation',
         open: false,
       },
       {
         title: 'Fun stuff',
-        dropdown: ['Clubs', 'Events', 'Sports'],
+        bgColor: 'lightyellow',
+        dropdown: [
+                  { label: 'Clubs', path: '/visa' },
+                  { label: 'Events', path: '/registration' },
+                  { label: 'Sports', path: '/bank' },
+                  ],
         route: '/fun',
         open: false,
       },

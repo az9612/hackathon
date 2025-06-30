@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <AppNavbar />
     <!-- Hero Section -->
-    <section class="hero-banner text-center text-white  py-5">
+    <section class="hero-banner text-center text-dark  py-5">
       <h1 class="display-1">Welcome to Germany!</h1>
       <p class="lead">Essential information for your first weeks</p>
     </section>
@@ -12,7 +12,7 @@
       <InfoCard 
         title="Visa Application"
         :steps="visaSteps"
-        linkPath="/visa-application"
+        linkPath="/visa"
       />
       <InfoCard 
         title="Residence Registration"
@@ -86,7 +86,7 @@ export default {
 
 <style scoped>
 .hero-banner {
-  background: #6097d6;
+  background: peachpuff;
   border-radius: 20px;
   margin-bottom: 2rem;
   padding: 2rem;
