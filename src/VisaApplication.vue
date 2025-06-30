@@ -131,7 +131,7 @@ h2 {
   
   .term {
     margin-bottom: 0.3rem;
-    min-width: auto;
+    /* min-width: auto; */
   }
 }
 
