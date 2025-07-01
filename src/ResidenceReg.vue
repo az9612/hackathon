@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <AppNavbar />
-    <div class="container-sm w-75">
+    <div class="container-sm w-75 h-75%">
       <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Residence Registration (Anmeldung)</h1>
@@ -43,17 +43,20 @@
     </dd>
   </dl> 
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts
    }
 }
 </script>

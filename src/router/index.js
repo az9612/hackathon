@@ -15,9 +15,9 @@ const routes = [
   { name: 'Visa Application', path: '/visa', content: 'Apply for visa, documents, process', component: VisaApplication },
   { name: 'Study in Germany', path: '/study', content: 'Study programs, universities, application', component: StudyPage },
   { name: 'First Steps', path: '/first', content: 'Registration, apartment, insurance', component: FirstStep },
-  {path: '/resireg', component: ResidenceReg },
-  {path: '/health', component: HealthIns},
-  {path: '/bank', component: BankAcc}
+  { name: 'Residence Registration' ,path: '/resireg', component: ResidenceReg },
+  { name: 'Health Insurance' ,path: '/health', component: HealthIns},
+  { name: 'Bank Account', path: '/bank', component: BankAcc}
 ]
 
 const router = createRouter({

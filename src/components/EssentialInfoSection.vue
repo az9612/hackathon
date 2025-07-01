@@ -39,17 +39,17 @@ export default {
         { 
           title: 'Residence Registration', 
           desc: 'Anmeldung process explained',
-          to: '/registration'
+          to: '/resireg'
         },
         { 
           title: 'Health Insurance', 
           desc: 'Mandatory for all students',
-          to: '/insurance'
+          to: '/health'
         },
         { 
           title: 'Bank Account', 
           desc: 'Opening a German account',
-          to: '/bank-account'
+          to: '/bank'
         }
       ],
       studyLinks: [

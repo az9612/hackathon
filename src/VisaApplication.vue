@@ -41,15 +41,18 @@
         </div>
       </div>
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
 
 export default {
   components: { 
-    AppNavbar
+    AppNavbar,
+    UniversityContacts
    }
 }
 </script>
