@@ -12,6 +12,7 @@
     
     <EssentialInfoSection />
     <UniversityContacts />
+    <ChatbotPopup />
   </div>
 </template>
 
@@ -19,13 +20,15 @@
 import AppNavbar from './components/AppNavbar.vue';
 import EssentialInfoSection from './components/EssentialInfoSection.vue';
 import UniversityContacts from './components/UniversityContacts.vue';
+import ChatbotPopup from './components/ChatbotPopup.vue';
 
 export default {
   name: 'HomePage',
   components: {
     AppNavbar,
     EssentialInfoSection,
-    UniversityContacts
+    UniversityContacts,
+    ChatbotPopup
   }
 }
 </script>
