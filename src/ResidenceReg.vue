@@ -1,15 +1,27 @@
 <template>
   <div class="app">
     <AppNavbar />
+    <div class="container-fluid mb-3">
+    <BannerGermany>
+      <template #title>
+        Residence Registration
+      </template>
+      <template #description>
+      Everyone who moves to Germany must register at their new place of residence within 14 days.<br>
+      If the city administration does not provide any appointments within 14 days, please schedule the earliest possible appointment
+      </template>
+    </BannerGermany>
+    </div>
+
     <div class="container-sm w-75 h-75% my-5">
-      <div class="row mb-4">
+      <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Residence Registration (Anmeldung)</h1>
         </div>
       </div>
   <div class="row mb-4">
   <h5 class="text-start">Everyone who moves to Germany must register at their new place of residence within 14 days. If the city administration does not provide any appointments within 14 days, please schedule the earliest possible appointment. </h5>
-  </div>
+  </div> -->
   <dl class="row">
     <dt class="col-sm-3 text-start">Duisburg</dt>
     <dd class="col-sm-9 text-start">
@@ -46,12 +58,14 @@
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
 import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
     AppNavbar,
-    UniversityContacts
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
