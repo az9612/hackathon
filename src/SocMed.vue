@@ -1,8 +1,21 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
-      <div class="row mb-4">
+      <div class="container-fluid mb-3">
+        <BannerGermany>
+        <template #title>
+          Social Media
+        </template>
+        <template #description>
+          Stay connected and be part of our vibrant university community online! 
+          Follow us on social media to get the latest news, events, student stories, and campus highlights. 
+          It’s a great way to stay informed, meet fellow students, and share your own experiences along the way.
+        </template>
+        </BannerGermany>
+      </div>
+
+    <div class="container-sm w-50 my-5">
+      <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Social Media</h1>
         </div>
@@ -11,8 +24,8 @@
           ← Back to Previous Page
         </router-link>
         </div>
-      </div>
-  <div class="row mb-5">
+      </div> -->
+  <div class="row">
   <h5 class="text-start"></h5>
   </div>
   <dl class="row">
@@ -35,17 +48,22 @@
     
   </dl> 
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>

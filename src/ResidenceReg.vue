@@ -13,7 +13,7 @@
     </BannerGermany>
     </div>
 
-    <div class="container-sm w-75 h-75% my-5">
+    <div class="container-sm w-50 my-5">
       <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Residence Registration (Anmeldung)</h1>
