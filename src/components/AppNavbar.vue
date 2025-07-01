@@ -1,5 +1,5 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-ude my-1">
   <div class="container-fluid">
     <router-link class="navbar-brand" to="/">New in Town</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +40,7 @@
     @keydown.up.prevent="highlightPrev"
     @keydown.enter.prevent="goToHighlightedPage"
   />
-  <button class="btn btn-outline-success" type="submit">Search</button>
+  <button class="btn btn-outline-secondary" type="submit">Search</button>
 
   <!-- Autocomplete suggestions -->
   <ul class="list-group position-absolute mt-5 w-100" style="z-index: 9999;" v-if="filteredPages.length">
