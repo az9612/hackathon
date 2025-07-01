@@ -1,8 +1,8 @@
 <template>
-  <section class="visa-hero position-relative">
-    <div class="container-fluid h-100">
+  <section class="visa-hero">
+    <div class="container-fluid">
       <div class="row justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-10 col-lg-8 text-center">
+        <div class="col-12 text-center">
           <h1 class="display-5 mb-3">
             <slot name="title"></slot>
           </h1>
@@ -36,9 +36,7 @@ export default {
   margin: 0;
 }
 
-.container-fluid {
-  padding: 0 15px;
-}
+
 
 h1 {
   font-size: 2.5rem;

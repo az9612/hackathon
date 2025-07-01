@@ -1,10 +1,9 @@
 <template>
-  <div id="app">
+  <div class="container-fluid">
     <AppNavbar />
     <!-- Hero Section -->
-
-    <section class="hero-banner text-center text-dark py-5">
-      <h1 class="display-4">Welcome to University Duisburg-Essen</h1>
+    <section class="hero-banner text-center py-5">
+      <h1 class="display-4">Welcome to Universtiy Duisburg-Essen</h1>
       <p class="lead">Essential information for your first Semester</p>
     </section>
 
@@ -13,12 +12,12 @@
       <InfoCard 
         title="Einschreibung (Enrollment)"
         :steps="einschreibenSteps"
-        linkPath="/enrol"
+        linkPath="/einschreibungPage"
       />
       <InfoCard 
         title="Uni DUE Online Services"
         :steps="onlineServicesSteps"
-        linkPath="/service"
+        linkPath="/onlineServicesPage"
       />
       <InfoCard 
         title="Exams"
@@ -41,27 +40,24 @@
         <li><strong>Medical on-call service:</strong> 116 117</li>
       </ul>
     </section>
-    <UniversityContacts />
   </div>
 </template>
 
 <script>
 import InfoCard from './components/InfoCard.vue';
 import AppNavbar from './components/AppNavbar.vue';
-import UniversityContacts from './components/UniversityContacts.vue';
 
 export default {
   components: { 
     InfoCard,
-    AppNavbar,
-    UniversityContacts
+    AppNavbar
     },
   data() {
     return {
       einschreibenSteps: [
-        'Prepare the documents',
-        'Email the enrollment office with attachments',
-        'Pay semester fee after being officially enrolled',
+        'Documents - Insurance',
+        'Languangue Certificate (English or German)',
+        'Registration office in SG Building',
         'Attend O-Woche (Orientation Week)',
         
       ],
@@ -73,10 +69,11 @@ export default {
         'myUDE App'
       ],
       examsSteps: [
-        'How to register for exams',
         'Where to find exam dates',
+        'How to register for exams',
         'German language course',
-        'Module handbook and exam regulations'
+        'module handbook and exam regulations',
+        'ECTS credits and grading system'
       ],
       linkSteps: [
         'link 1',
@@ -91,9 +88,9 @@ export default {
 
 <style scoped>
 .hero-banner {
-  background: powderblue;
+  background: #6097d6;
   border-radius: 20px;
-  margin: 1rem;
+  margin-bottom: 2rem;
   padding: 2rem;
   color: white;
 }
