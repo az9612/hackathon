@@ -125,13 +125,15 @@
             </div>
           </div>
         </div>
-
-        <div class="text-center mt-4">
-          <router-link to="/study" class="btn btn-primary">
-            <i class="bi bi-arrow-left"></i> Back to Study Page
-          </router-link>
-        </div>
       </div>
+      <section class="d-flex justify-content-between py-4 mb-4">
+          <router-link to="/house" class="btn btn-outline-secondary">
+            &lt; Hosuing and Dormitories
+          </router-link>
+          <router-link to="/living" class="btn btn-outline-secondary">
+            Culture &gt;
+          </router-link>
+    </section>
     </div>
 
     <section class="contacts-section py-5">
@@ -161,6 +163,7 @@ export default {
   border-left: 4px solid #005293;
   height: 100%;
 }
+<<<<<<< HEAD
 
 .activity-image {
   max-height: 300px;
@@ -217,6 +220,103 @@ export default {
   color: #6c757d;
 }
 
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-outline-secondary {
+  border-color: #005293;
+  color: #005293;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #005293;
+  color: white;
+}
+=======
+>>>>>>> 7adbafed1a750e9d26ce860abbb912eb0afbced2
+
+.activity-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.activity-image:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image, .highlight-image {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.gallery-image:hover, .highlight-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.social-header {
+  color: #005293;
+  font-weight: 600;
+}
+
+.social-description {
+  color: #495057;
+}
+
+<<<<<<< HEAD
+dl {
+  margin-top: 1rem;
+}
+
+dt {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+=======
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #212529;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #005293;
+}
+
+.link-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
 .bi {
   font-size: 1.2rem;
   color: #005293;
@@ -230,5 +330,6 @@ export default {
 .btn-primary {
   background-color: #005293;
   border-color: #005293;
+>>>>>>> 7adbafed1a750e9d26ce860abbb912eb0afbced2
 }
 </style>

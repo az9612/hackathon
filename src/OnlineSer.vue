@@ -53,8 +53,19 @@
 
    
   </dl> 
+    <section class="d-flex justify-content-between py-4 mb-4">
+          <router-link to="/enrol" class="btn btn-outline-secondary">
+            &lt; Enrollment
+          </router-link>
+          <router-link to="/exam" class="btn btn-outline-secondary">
+            Exam Information &gt;
+          </router-link>
+    </section>
     </div>
-    <UniversityContacts />
+
+    <section class="contacts-section py-5">
+      <UniversityContacts />
+    </section>
   </div>  
 </template>
 
@@ -76,9 +87,26 @@ export default {
 
 
 <style scoped>
-/* .container-fluid {
-  background-color: #fffefe;
-} */
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-outline-secondary {
+  border-color: #005293;
+  color: #005293;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #005293;
+  color: white;
+}
 
 h1, h2 {
   font-weight: 600;
@@ -91,13 +119,25 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+dl {
+  margin-top: 1rem;
 }
 
+dt {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
 
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
 </style>
+
+
 
