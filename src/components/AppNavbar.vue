@@ -1,16 +1,17 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-ude mb-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-ude">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">New in Town</router-link>
+    <img class="navbar-brand me-3" :src="logoNew" height="50">
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <router-link class="nav-link" to="/">Home</router-link>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -23,9 +24,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul> -->
-<form class="d-flex position-absolute end-0" role="search" @submit.prevent="goToSelectedPage">
+        </li> -->
+      </ul>
+<form class="d-flex position-relative end-0" role="search" @submit.prevent="goToSelectedPage">
   <input
     class="form-control me-2"
     type="search"
@@ -60,10 +61,12 @@
 
 <script>
 // import { useRouter } from 'vue-router';
+import logoNew from '/src/assets/logonew_transparent.png';
 export default {
   name: 'AppNavbar',
     data() {
     return {
+      logoNew,
       searchQuery: '',
       filteredPages: [],
       highlightedIndex: -1
