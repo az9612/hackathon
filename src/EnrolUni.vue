@@ -1,15 +1,31 @@
 <template>
   <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75 my-5">
-      <div class="row mb-4">
+    <div class="container-fluid mb-3">
+    <BannerGermany>
+      <template #title>
+        Enrollment Process
+      </template>
+      <template #description>
+      Enrolling as an international student 
+      is an exciting step toward starting your studies. 
+      This guide will walk you through the enrollment process, 
+      helping you prepare the necessary documents and meet all requirements to officially join your university.
+      </template>
+    </BannerGermany>
+    </div>
+
+
+
+    <div class="container-sm w-50 my-5">
+      <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Enrollment</h1>
         </div>
       </div>
   <div class="row mb-4">
   <h5 class="text-start">Enrollment is only possible if you already enter Germany.</h5>
-  </div>
+  </div> -->
   <dl class="row">
     <dt class="col-sm-3 text-start">Email</dt>
     <dd class="col-sm-9 text-start">
@@ -42,7 +58,7 @@
     <dt class="col-sm-3 text-start">Enrollment Deadlines</dt>
     <dd class="col-sm-9 text-start">
       Please visit the
-      <a href="https://www.uni-due.de/studierendensekretariat/einschreibungsfristen.php" target="_blank">Registrar Office page</a>
+      <a href="https://www.uni-due.de/studierendensekretariat/einschreibungsfristen.php" target="_blank">Registrar Office page.</a>
     </dd>
 
     <dt class="col-sm-3 text-start">Semester fee</dt>
@@ -84,8 +100,22 @@
       can be found here.
     </dd>
   </dl> 
-    </div>
-    <UniversityContacts />
+
+  <section class="d-flex justify-content-between py-4 mb-4">
+          <router-link to="/bank" class="btn btn-outline-secondary">
+            &lt; Bank Account
+          </router-link>
+          <router-link to="/service" class="btn btn-outline-secondary">
+            Online Services &gt;
+          </router-link>
+    </section>
+
+    
+  </div>
+<section class="contacts-section py-5">
+      <UniversityContacts />
+    </section>
+    
   </div>
 </template>
 
@@ -93,21 +123,40 @@
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
 import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
     AppNavbar,
-    UniversityContacts
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
 
 
 <style scoped>
-/* .container-fluid {
-  background-color: #fffefe;
-} */
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-outline-secondary {
+  border-color: #005293;
+  color: #005293;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #005293;
+  color: white;
+}
 
 h1, h2 {
   font-weight: 600;
@@ -120,13 +169,24 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+dl {
+  margin-top: 1rem;
 }
 
+dt {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
 
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
 </style>
+
 

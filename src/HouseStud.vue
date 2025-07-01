@@ -1,20 +1,24 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
-      <div class="row mb-4">
-        <div class="col-9">
-          <h1 class="display-5 text-start">Accomodation</h1>
-        </div>
-        <div class="col-3">
-        <router-link to="/study" class="btn btn-outline-secondary ">
-          ← Back to Previous Page
-        </router-link>
-        </div>
-      </div>
-  <div class="row mb-5">
-  <h5 class="text-start">Most students lives in a shared student housing with 2-3 other people.</h5>
-  </div>
+    <div class="container-fluid mb-3">
+      <BannerGermany>
+        <template #title>
+          Accomodation
+        </template>
+        <template #description>
+        Finding a comfortable place to live is a big part of settling 
+        into your new life in Germany. Whether you're looking for student 
+        housing, a shared flat, or private accommodation, we’re here to help 
+        make the process easier.
+        </template>
+      </BannerGermany>
+    </div>
+
+
+
+    <div class="container-sm w-50 my-5">
+
   <dl class="row">
 
     <dt class="col-sm-5 text-start">Student Union Essen-Duisburg (STW Essen-Duisburg)</dt>
@@ -48,27 +52,57 @@
     </dd>
     
   </dl> 
+  <section class="d-flex justify-content-between py-4 mb-4">
+          <router-link to="/link" class="btn btn-outline-secondary">
+            &lt; Relevant Links
+          </router-link>
+          <router-link to="/social" class="btn btn-outline-secondary">
+            Social Media &gt;
+          </router-link>
+    </section>
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
 
 
 <style scoped>
-/* .container-fluid {
-  background-color: #fffefe;
-} */
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-outline-secondary {
+  border-color: #005293;
+  color: #005293;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #005293;
+  color: white;
+}
 
 h1, h2 {
   font-weight: 600;
@@ -81,13 +115,25 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+dl {
+  margin-top: 1rem;
 }
 
+dt {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
 </style>
+
 
 
