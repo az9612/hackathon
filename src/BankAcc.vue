@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <AppNavbar />
     <div class="container-fluid mb-3">
@@ -15,6 +14,16 @@
 
     <div class="container-fluid">
       <div class="requirements-container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h1 class="display-5 text-start">Bank Account</h1>
+            <p class="text-start">
+              A German bank account (Girokonto) is essential for renting a flat, receiving salaries, and daily transactions. 
+              Your debit card (EC-Karte) can be used throughout the eurozone for payments at supermarkets and other establishments.
+            </p>
+          </div>
+        </div>
+
         <dl class="row">
           <dt class="col-sm-3 text-start">Suggested Banks</dt>
           <dd class="col-sm-9 text-start">
@@ -33,7 +42,7 @@
               <li>Valid passport</li>
               <li>Residence permit (Aufenthaltserlaubnis)</li>
               <li>Registration certificate (Meldebescheinigung)</li>
-              <li>Proof of income or enrollment (depending on account type)</li>
+              <li>Proof of income or enrollment</li>
               <li>German tax ID (Steueridentifikationsnummer)</li>
             </ul>
           </dd>
@@ -53,40 +62,6 @@
     <section class="contacts-section py-5">
       <UniversityContacts />
     </section>
-
-  <div class="app">
-    <AppNavbar />
-    <div class="container-sm w-75 h-75% my-5">
-      <div class="row mb-4">
-        <div class="col-9">
-          <h1 class="display-5 text-start">Bank Account</h1>
-        </div>
-      </div>
-
-      <div class="row mb-4">
-        <h5 class="text-start">
-          If you plan on living in Germany long term, you require a German bank account (current account) (Girokonto) to rent a flat or to receive your salary via bank transfer, for instance. 
-          But you will also be able to use your debit card (EC-karte) in your day-to-day life, for example, 
-          to pay at the supermarket. You can use your debit card in other countries in Europe which use the euro as currency as well.
-        </h5>
-      </div>
-
-      <dl class="row">
-        <dt class="col-sm-3 text-start">Suggested Banks</dt>
-        <dd class="col-sm-9 text-start">Commerzbank, Deutsche Bank, Postbank, Sparkasse</dd>
-
-        <dt class="col-sm-3 text-start">Common Required Documents</dt>
-        <dd class="col-sm-9 text-start">
-          valid passport<br>
-          residence permit (Aufenthaltserlaubnis)<br>
-          registration certificate (Meldebescheinigung)<br>
-          payslip (depending on the account type)
-        </dd>
-      </dl>
-    </div>
-    <UniversityContacts />
-
-  </div>
   </div>
 </template>
 
@@ -94,7 +69,6 @@
 import AppNavbar from './components/AppNavbar.vue'
 import BannerGermany from './components/BannerGermany.vue'
 import UniversityContacts from './components/UniversityContacts.vue'
-
 
 export default {
   components: { 
@@ -106,6 +80,26 @@ export default {
 </script>
 
 <style scoped>
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-outline-secondary {
+  border-color: #005293;
+  color: #005293;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #005293;
+  color: white;
+}
 
 h1, h2 {
   font-weight: 600;
@@ -118,11 +112,23 @@ h1 {
   margin-bottom: 1.5rem;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+dl {
+  margin-top: 1rem;
+}
+
+dt {
+  font-weight: 600;
+  padding-top: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 0;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
 }
 </style>
 

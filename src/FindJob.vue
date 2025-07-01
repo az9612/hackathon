@@ -62,8 +62,6 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
+
+

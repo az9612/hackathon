@@ -127,8 +127,4 @@ a:hover {
     margin-bottom: 0.2rem;
   }
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0

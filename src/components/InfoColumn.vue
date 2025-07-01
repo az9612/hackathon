@@ -70,8 +70,4 @@ export default {
   font-size: 0.9rem;
   color: #666;
 }
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
