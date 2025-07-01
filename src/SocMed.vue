@@ -1,95 +1,234 @@
 <template>
-  <div class="app">
+  <div>
     <AppNavbar />
-      <div class="container-fluid mb-3">
-        <BannerGermany>
+    <div class="container-fluid mb-3">
+      <BannerGermany>
         <template #title>
-          Social Media
+          YOUR WINDOW TO CAMPUS LIFE
         </template>
         <template #description>
-          Stay connected and be part of our vibrant university community online! 
-          Follow us on social media to get the latest news, events, student stories, and campus highlights. 
-          It’s a great way to stay informed, meet fellow students, and share your own experiences along the way.
+          Follow our social channels to experience campus events, student stories, and academic highlights!
         </template>
-        </BannerGermany>
-      </div>
-
-    <div class="container-sm w-50 my-5">
-      <!-- <div class="row mb-4">
-        <div class="col-9">
-          <h1 class="display-5 text-start">Social Media</h1>
-        </div>
-        <div class="col-3">
-        <router-link to="/study" class="btn btn-outline-secondary ">
-          ← Back to Previous Page
-        </router-link>
-        </div>
-      </div> -->
-  <div class="row">
-  <h5 class="text-start"></h5>
-  </div>
-  <dl class="row">
-    <dt class="col-sm-3 text-start">University</dt>
-    <dd class="col-sm-9 text-start">
-      &#x2022; <a href="https://www.instagram.com/uni_duisburg_essen?igsh=MWFmNHFndW15ZTNmMA==" target="_blank">Instagram</a> <br>
-      &#x2022; <a href="https://www.tiktok.com/@unidue?_t=ZN-8xdiZNsGLKg&_r=1" target="_blank">TikTok</a> <br>
-    </dd>
-
-    <dt class="col-sm-3 text-start">Faculty of Engineering</dt>
-    <dd class="col-sm-9 text-start">
-      &#x2022; <a href="http://www.instagram.com/fiw.ude/" target="_blank">Instagram</a> <br>
-      &#x2022; <a href="https://www.tiktok.com/@iw_ude" target="_blank">TikTok</a> <br>
-    </dd>
-
-    <dt class="col-sm-3 text-start">ISE Student Council</dt>
-    <dd class="col-sm-9 text-start">
-      &#x2022; <a href="http://www.instagram.com/fachschaft.ise/" target="_blank">Instagram</a> <br>
-    </dd>
-    
-  </dl> 
+      </BannerGermany>
     </div>
-    <UniversityContacts />
+
+    <div class="container-fluid">
+      <div class="requirements-container">
+        <!-- University Section with Image -->
+        <div class="row align-items-center mb-5 g-4">
+          <div class="col-md-6">
+            <div class="social-section p-4 h-100">
+              <h3 class="social-header">
+                <i class="bi bi-building"></i> University Official
+              </h3>
+              <p class="social-description">
+                Get the big picture of campus life - from graduation ceremonies to international student welcome events.
+              </p>
+              <div class="social-links">
+                <a href="https://www.instagram.com/uni_duisburg_essen" target="_blank" class="social-link">
+                  <i class="bi bi-instagram"></i> Instagram: 
+                  <span class="link-description">See campus tours and event highlights</span>
+                </a>
+                <a href="https://www.tiktok.com/@unidue" target="_blank" class="social-link">
+                  <i class="bi bi-tiktok"></i> TikTok: 
+                  <span class="link-description">Campus challenges and student takeovers</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="@/assets/campus-event1.jpg" alt="University campus event" class="img-fluid rounded shadow activity-image">
+          </div>
+        </div>
+
+        <!-- Faculty Section with Image -->
+        <div class="row align-items-center mb-5 g-4 flex-md-row-reverse">
+          <div class="col-md-6">
+            <div class="social-section p-4 h-100">
+              <h3 class="social-header">
+                <i class="bi bi-cpu"></i> Faculty of Engineering
+              </h3>
+              <p class="social-description">
+                Where innovation comes to life - see robot competitions, lab tours, and student project demos.
+              </p>
+              <div class="social-links">
+                <a href="http://www.instagram.com/fiw.ude/" target="_blank" class="social-link">
+                  <i class="bi bi-instagram"></i> Instagram: 
+                  <span class="link-description">Project showcases and achievement highlights</span>
+                </a>
+                <a href="https://www.tiktok.com/@iw_ude" target="_blank" class="social-link">
+                  <i class="bi bi-tiktok"></i> TikTok: 
+                  <span class="link-description">60-second engineering marvels</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="@/assets/engineering-activities.jpg" alt="Students working in engineering lab" class="img-fluid rounded shadow activity-image">
+          </div>
+        </div>
+
+        <!-- Student Council Section with Image Grid -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="social-section p-4">
+              <h3 class="social-header">
+                <i class="bi bi-people"></i> ISE Student Council
+              </h3>
+              <p class="social-description">
+                The real student experience - from orientation week to late-night study sessions.
+              </p>
+              <div class="social-links mb-3">
+                <a href="http://www.instagram.com/fachschaft.ise/" target="_blank" class="social-link">
+                  <i class="bi bi-instagram"></i> Instagram: 
+                  <span class="link-description">Unfiltered campus life and event announcements</span>
+                </a>
+              </div>
+              
+              <!-- Image Grid -->
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <img src="@/assets/university-activities.jpg" alt="Student orientation event" class="img-fluid rounded shadow-sm gallery-image">
+                </div>
+                <div class="col-md-4">
+                  <img src="@/assets/student-council-activities.jpg" alt="Study group session" class="img-fluid rounded shadow-sm gallery-image">
+                </div>
+                <div class="col-md-4">
+                  <img src="@/assets/campus-event3.jpg" alt="Campus festival" class="img-fluid rounded shadow-sm gallery-image">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Highlights Carousel -->
+        <div class="row mb-5">
+          <div class="col-12">
+            <div class="social-section p-4">
+              <h3 class="social-header text-center mb-4">
+                <i class="bi bi-stars"></i> Campus Highlights
+              </h3>
+              <div class="row g-3">
+                <div class="col-md-3 col-6">
+                  <img src="@/assets/campus-event1.jpg"  class="img-fluid rounded shadow-sm highlight-image">
+                </div>
+                <div class="col-md-3 col-6">
+                  <img src="@/assets/campus-event2.jpg" class="img-fluid rounded shadow-sm highlight-image">
+                </div>
+                <div class="col-md-3 col-6">
+                  <img src="@/assets/engineering-activities.jpg" class="img-fluid rounded shadow-sm highlight-image">
+                </div>
+                <div class="col-md-3 col-6">
+                  <img src="@/assets/student-council-activities.jpg" class="img-fluid rounded shadow-sm highlight-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <router-link to="/study" class="btn btn-primary">
+            <i class="bi bi-arrow-left"></i> Back to Study Page
+          </router-link>
+        </div>
+      </div>
+    </div>
+
+    <section class="contacts-section py-5">
+      <UniversityContacts />
+    </section>
+  </div>
   </div>
 </template>
 
 <script>
-//import VisaInfoSection from './components/VisaInfoSection.vue'
-import AppNavbar from './components/AppNavbar.vue';
-import UniversityContacts from './components/UniversityContacts.vue';
-import BannerGermany from './components/BannerGermany.vue';
+import AppNavbar from './components/AppNavbar.vue'
+import BannerGermany from './components/BannerGermany.vue'
+import UniversityContacts from './components/UniversityContacts.vue'
 
 export default {
-  components: { 
-    //VisaInfoSection,
+  components: {
     AppNavbar,
-    UniversityContacts,
-    BannerGermany
-   }
+    BannerGermany,
+    UniversityContacts
+  }
 }
 </script>
 
-
 <style scoped>
-/* .container-fluid {
-  background-color: #fffefe;
-} */
+.social-section {
+  background-color: #f8f9fa;
+  border-left: 4px solid #005293;
+  height: 100%;
+}
 
-h1, h2 {
+.activity-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.activity-image:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image, .highlight-image {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.gallery-image:hover, .highlight-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.social-header {
+  color: #005293;
   font-weight: 600;
-  color: #2c3e50;
-  text-align: left;
 }
 
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+.social-description {
+  color: #495057;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #212529;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #005293;
+}
+
+.link-description {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.bi {
+  font-size: 1.2rem;
+  color: #005293;
+}
+
+.contacts-section {
+  background-color: #005293;
+  margin-top: 2rem;
+}
+
+.btn-primary {
+  background-color: #005293;
+  border-color: #005293;
+}
 </style>
