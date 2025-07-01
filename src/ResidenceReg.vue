@@ -50,6 +50,11 @@
     </dd>
   </dl> 
     </div>
+        <section class="text-center py-4 mb-4">
+          <router-link to="/health" class="btn btn-outline-secondary">
+            Residence Registration ->
+          </router-link>
+        </section>
     <UniversityContacts />
   </div>
 </template>

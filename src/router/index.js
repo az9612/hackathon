@@ -27,12 +27,12 @@ const routes = [
   { name: 'Bank Account', path: '/bank', component: BankAcc},
   { name: 'Enrollment ',path: '/enrol', component: EnrolUni},
   { name: 'Online Services ',path:'/service', component: OnlineSer},
-  {path:'/exam', component: ExamInf},
-  {path:'/link', component: UseLink},
-  {path:'/house', component: HouseStud},
-  {path:'/social', component: SocMed},
-  {path:'/living', component: LivCit},
-  {path:'/job', component: FindJob}
+  { name :'Exam', path:'/exam', component: ExamInf},
+  { name: 'Relevant Links', path:'/link', component: UseLink},
+  { name: 'Accomodation', path:'/house', component: HouseStud},
+  { name: 'Social Media',path:'/social', component: SocMed},
+  { name:'Culture',path:'/living', component: LivCit},
+  { name: 'Jobs',path:'/job', component: FindJob}
 ]
 
 const router = createRouter({

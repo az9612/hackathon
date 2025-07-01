@@ -54,7 +54,7 @@ export default {
       ],
       studyLinks: [
         { 
-          title: 'Einschreiben', 
+          title: 'Enrollment', 
           desc: 'Enrollment process for new students',
           to: '/enrol'
         },
@@ -66,46 +66,37 @@ export default {
         {
           title: 'Exams', 
           desc: 'Exam schedules, rules and regulations',
-          to: '/university-services'
+          to: '/exam'
         },
         { 
           title: 'Relevant Links', 
           desc: 'Useful links for students',
-          to: '/links'
+          to: '/link'
         }
       ],
       accomodationLinks: [
         { 
-          title: 'Exams', 
-          desc: 'Semester tickets and routes',
-          to: '/transport'
+          title: 'Housing and Dormitories', 
+          desc: 'Housing options for students',
+          to: '/house'
         },
-        { 
-          title: 'Local Culture', 
-          desc: 'Customs and etiquette',
-          to: '/culture'
-        },
-        { 
-          title: 'Fun & Social Life', 
-          desc: 'Student clubs and activities',
-          to: '/fun'
-        }
+
       ],
       lifeLinks: [
         { 
-          title: 'Exams', 
+          title: 'Social Media', 
           desc: 'Semester tickets and routes',
-          to: '/transport'
+          to: '/social'
         },
         { 
-          title: 'Local Culture', 
-          desc: 'Customs and etiquette',
-          to: '/culture'
+          title: 'Culture', 
+          desc: 'Events and activities',
+          to: '/living'
         },
         { 
-          title: 'Fun & Social Life', 
-          desc: 'Student clubs and activities',
-          to: '/fun'
+          title: 'Jobs', 
+          desc: 'Working while studying',
+          to: '/job'
         }
       ]
     }
