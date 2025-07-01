@@ -45,9 +45,7 @@
             </ul>
           </dd>
         </dl>
-      </div>
-
-        <section class="d-flex justify-content-between py-4 mb-4">
+          <section class="d-flex justify-content-between py-4 mb-4">
           <router-link to="/visa" class="btn btn-outline-secondary">
             &lt; Visa Application
           </router-link>
@@ -55,6 +53,7 @@
             Health Insurance &gt;
           </router-link>
         </section>
+      </div>
 
       <UniversityContacts />
 

@@ -28,7 +28,8 @@ const routes = [
   { name: 'Accomodation', path:'/house', component: HouseStud},
   { name: 'Social Media',path:'/social', component: SocMed},
   { name:'Culture',path:'/living', component: LivCit},
-  { name: 'Jobs',path:'/job', component: FindJob}
+  { name: 'Jobs',path:'/job', component: FindJob},
+
 ]
 
 const router = createRouter({
