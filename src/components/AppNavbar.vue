@@ -1,7 +1,8 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark my-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-ude">
   <div class="container-fluid">
-    <router-link class="navbar-brand" to="/">New in Town</router-link>
+    <img class="navbar-brand me-3" :src="logoNew" height="50">
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,10 +11,7 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/">Home</router-link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
@@ -26,9 +24,9 @@
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
       </ul>
-<form class="d-flex position-relative" role="search" @submit.prevent="goToSelectedPage">
+<form class="d-flex position-relative end-0" role="search" @submit.prevent="goToSelectedPage">
   <input
     class="form-control me-2"
     type="search"
@@ -40,7 +38,7 @@
     @keydown.up.prevent="highlightPrev"
     @keydown.enter.prevent="goToHighlightedPage"
   />
-  <button class="btn btn-outline-success" type="submit">Search</button>
+  <button class="btn btn-outline-secondary" type="submit">Search</button>
 
   <!-- Autocomplete suggestions -->
   <ul class="list-group position-absolute mt-5 w-100" style="z-index: 9999;" v-if="filteredPages.length">
@@ -63,10 +61,12 @@
 
 <script>
 // import { useRouter } from 'vue-router';
+import logoNew from '/src/assets/logonew_transparent.png';
 export default {
   name: 'AppNavbar',
     data() {
     return {
+      logoNew,
       searchQuery: '',
       filteredPages: [],
       highlightedIndex: -1
@@ -79,12 +79,16 @@ export default {
   },
 methods: {
   filterSuggestions() {
-    const query = this.searchQuery.toLowerCase()
+    const query = this.searchQuery.toLowerCase();
     this.filteredPages = query
-      ? this.allNamedRoutes.filter(p => p.name.toLowerCase().includes(query))
-      : []
-    this.highlightedIndex = -1
+    ? this.allNamedRoutes.filter(p =>
+        (p.name && p.name.toLowerCase().includes(query)) ||
+        (p.content && p.content.toLowerCase().includes(query))
+      )
+    : [];
+    this.highlightedIndex = -1;
   },
+
   goToPage(path) {
     this.$router.push(path)
     this.searchQuery = ''

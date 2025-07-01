@@ -1,18 +1,13 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
     <div class="container-sm w-75">
       <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">University Online Services</h1>
         </div>
-        <div class="col-3">
-        <router-link to="/study" class="btn btn-outline-secondary ">
-          ← Back to Previous Page
-        </router-link>
-        </div>
       </div>
-  <div class="row mb-5">
+  <div class="row mb-4">
   <h5 class="text-start"></h5>
   </div>
   <dl class="row">

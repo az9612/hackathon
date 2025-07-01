@@ -1,0 +1,24 @@
+// custom.scss
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+// ✅ Step 1: Override Bootstrap variables BEFORE importing
+// create custom color
+$navbar-light-color: #dfe4f2;
+$navbar-light-hover-color: #cca833;
+$navbar-light-brand-color: #dfe4f2;
+$navbar-light-brand-hover-color: #cca833;
+$custom-colors:(
+    "ude":#004c93
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// ✅ Step 2: Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+// ✅ Step 3: Add your own styles if needed
+.navbar-brand {
+  font-weight: bold;
+}

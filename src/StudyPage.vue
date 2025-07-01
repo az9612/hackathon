@@ -41,17 +41,20 @@
         <li><strong>Medical on-call service:</strong> 116 117</li>
       </ul>
     </section>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 import InfoCard from './components/InfoCard.vue';
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
 
 export default {
   components: { 
     InfoCard,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts
     },
   data() {
     return {

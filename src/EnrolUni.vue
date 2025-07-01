@@ -1,18 +1,13 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
+    <div class="container-sm w-75 my-5">
       <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Enrollment</h1>
         </div>
-        <div class="col-3">
-        <router-link to="/study" class="btn btn-outline-secondary ">
-          ← Back to Previous Page
-        </router-link>
-        </div>
       </div>
-  <div class="row mb-5">
+  <div class="row mb-4">
   <h5 class="text-start">Enrollment is only possible if you already enter Germany.</h5>
   </div>
   <dl class="row">
@@ -23,7 +18,7 @@
     </dd>
 
     <dt class="col-sm-3"></dt>
-    <dt class="col-sm-3 text-start">Include the Information</dt>
+    <dt class="col-sm-3 text-start">Include the Information (Zulassung)</dt>
     <dd class="col-sm-6 text-start">
       &#x2022; Full name<br>
       &#x2022; Date of birth <br>
@@ -90,17 +85,20 @@
     </dd>
   </dl> 
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts
    }
 }
 </script>
