@@ -1,8 +1,21 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
-      <div class="row mb-4">
+      <div class="container-fluid mb-3">
+      <BannerGermany>
+      <template #title>
+        Examination Information
+      </template>
+      <template #description>
+      Exams are an important part of your academic journey, 
+      and we’re here to help you feel prepared and informed every 
+      step of the way. On this page, you’ll find everything you need to know about exam schedules, registration, formats, and guidelines.
+      </template>
+    </BannerGermany>
+    </div>
+
+    <div class="container-sm w-50 my-5">
+      <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Examination Information</h1>
         </div>
@@ -11,10 +24,9 @@
           ← Back to Previous Page
         </router-link>
         </div>
-      </div>
-  <div class="row mb-5">
-  <h5 class="text-start"></h5>
-  </div>
+      </div> -->
+  <div class="row">
+  
   <dl class="row">
     <dt class="col-sm-3 text-start">Registration</dt>
     <dd class="col-sm-9 text-start">
@@ -48,18 +60,25 @@
 
    
   </dl> 
-    </div>
+  </div>
+    
+  </div>
+  <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
@@ -89,3 +108,4 @@ h2 {
 }
 
 </style>
+

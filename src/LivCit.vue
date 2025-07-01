@@ -1,8 +1,19 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
-      <div class="row mb-4">
+    <div class="container-fluid mb-3">
+      <BannerGermany>
+        <template #title>
+          Culture
+        </template>
+        <template #description>
+        From traditional festivals and food markets to concerts, 
+        museums, and neighborhood gatherings, there’s always something exciting to explore. This page will help you discover the best of local life and feel right at home in your new community.        </template>
+      </BannerGermany>
+    </div>
+
+    <div class="container-sm w-50 my-5">
+      <!-- <div class="row">
         <div class="col-9">
           <h1 class="display-5 text-start">Living</h1>
         </div>
@@ -11,7 +22,7 @@
           ← Back to Previous Page
         </router-link>
         </div>
-      </div>
+      </div> -->
   <div class="row mb-5">
   <h5 class="text-start"></h5>
   </div>
@@ -33,17 +44,22 @@
     
   </dl> 
     </div>
+    <UniversityContacts />
   </div>
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>

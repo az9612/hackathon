@@ -1,15 +1,31 @@
 <template>
   <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75 my-5">
-      <div class="row mb-4">
+    <div class="container-fluid mb-3">
+    <BannerGermany>
+      <template #title>
+        Enrollment Process
+      </template>
+      <template #description>
+      Enrolling as an international student 
+      is an exciting step toward starting your studies. 
+      This guide will walk you through the enrollment process, 
+      helping you prepare the necessary documents and meet all requirements to officially join your university.
+      </template>
+    </BannerGermany>
+    </div>
+
+
+
+    <div class="container-sm w-50 my-5">
+      <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Enrollment</h1>
         </div>
       </div>
   <div class="row mb-4">
   <h5 class="text-start">Enrollment is only possible if you already enter Germany.</h5>
-  </div>
+  </div> -->
   <dl class="row">
     <dt class="col-sm-3 text-start">Email</dt>
     <dd class="col-sm-9 text-start">
@@ -42,7 +58,7 @@
     <dt class="col-sm-3 text-start">Enrollment Deadlines</dt>
     <dd class="col-sm-9 text-start">
       Please visit the
-      <a href="https://www.uni-due.de/studierendensekretariat/einschreibungsfristen.php" target="_blank">Registrar Office page</a>
+      <a href="https://www.uni-due.de/studierendensekretariat/einschreibungsfristen.php" target="_blank">Registrar Office page.</a>
     </dd>
 
     <dt class="col-sm-3 text-start">Semester fee</dt>
@@ -93,12 +109,14 @@
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
 import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
     AppNavbar,
-    UniversityContacts
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
@@ -127,4 +145,6 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
+
 </style>
+

@@ -1,15 +1,18 @@
 <template>
   <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
-      <div class="row mb-4">
-        <div class="col-9">
-          <h1 class="display-5 text-start">University Online Services</h1>
-        </div>
-      </div>
-  <div class="row mb-4">
-  <h5 class="text-start"></h5>
-  </div>
+    <div class="container-fluid mb-3">
+        <BannerGermany>
+        <template #title>
+          University Online Services
+        </template>
+        <template #description>
+        Welcome to your digital hub for learning and student life!
+        From accessing course materials on Moodle to registering for exams and managing your student account, everything you need is just a few clicks away.
+        </template>
+      </BannerGermany>
+          </div>
+      <div class="container-sm w-50 my-5">
   <dl class="row">
     <dt class="col-sm-3 text-start">HisInOne</dt>
     <dd class="col-sm-9 text-start">
@@ -44,24 +47,29 @@
         &#x2022; Menus for the canteens and cafeterias <br>
         &#x2022; News from the university <br>
       <a href="https://apps.apple.com/de/app/myude/id6469146657" target="_blank">For IOS</a> <br>
-      <a href="https://play.google.com/store/apps/details?id=de.uni_due.myude&pli=1" target="_blank">For Android</a> <br>
+      <a href="https://plagity.google.com/store/apps/details?id=de.uni_due.myude&pli=1" target="_blank">For Android</a> <br>
     </dd>
 
 
    
   </dl> 
     </div>
-  </div>
+    <UniversityContacts />
+  </div>  
 </template>
 
 <script>
 //import VisaInfoSection from './components/VisaInfoSection.vue'
 import AppNavbar from './components/AppNavbar.vue';
+import UniversityContacts from './components/UniversityContacts.vue';
+import BannerGermany from './components/BannerGermany.vue';
 
 export default {
   components: { 
     //VisaInfoSection,
-    AppNavbar
+    AppNavbar,
+    UniversityContacts,
+    BannerGermany
    }
 }
 </script>
@@ -90,4 +98,6 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
+
 </style>
+
