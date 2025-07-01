@@ -1,20 +1,13 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75">
+    <div class="container-sm w-75 my-5">
       <!-- Page Header -->
       <div class="row mb-4">
         <h1 class="display-5 text-start">Health Insurance (Krankenversicherung)</h1>
-        <div class="col-6 mx-auto">
-        <router-link to="/" class="btn btn-outline-secondary ">
-          ← Back to Homepage
-        </router-link>
-        </div>
-
       </div>
-
       <!-- Info Introduction -->
-      <div class="row mb-5">
+      <div class="row mb-4">
         <!-- <h2 class="fw-bold">Health Insurance</h2> -->
         <h5 class="text-start">
           In order to enrol in their selected course of study, prospective students require a statutory health insurance provider. 

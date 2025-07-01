@@ -1,17 +1,14 @@
 <template>
-<nav class="navbar navbar-expand-lg navbar-light bg-ude my-1">
+<nav class="navbar navbar-expand-lg navbar-light bg-ude mb-1">
   <div class="container-fluid">
     <router-link class="navbar-brand" to="/">New in Town</router-link>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <router-link class="nav-link" to="/">Home</router-link>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,8 +24,8 @@
         <li class="nav-item">
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
-      </ul>
-<form class="d-flex position-relative" role="search" @submit.prevent="goToSelectedPage">
+      </ul> -->
+<form class="d-flex position-absolute end-0" role="search" @submit.prevent="goToSelectedPage">
   <input
     class="form-control me-2"
     type="search"
@@ -79,12 +76,16 @@ export default {
   },
 methods: {
   filterSuggestions() {
-    const query = this.searchQuery.toLowerCase()
+    const query = this.searchQuery.toLowerCase();
     this.filteredPages = query
-      ? this.allNamedRoutes.filter(p => p.name.toLowerCase().includes(query))
-      : []
-    this.highlightedIndex = -1
+    ? this.allNamedRoutes.filter(p =>
+        (p.name && p.name.toLowerCase().includes(query)) ||
+        (p.content && p.content.toLowerCase().includes(query))
+      )
+    : [];
+    this.highlightedIndex = -1;
   },
+
   goToPage(path) {
     this.$router.push(path)
     this.searchQuery = ''

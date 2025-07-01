@@ -55,23 +55,23 @@ export default {
       studyLinks: [
         { 
           title: 'Einschreiben', 
-          desc: 'Find student dorms and apartments',
-          to: '/accommodation'
+          desc: 'Enrollment process for new students',
+          to: '/enrol'
         },
         { 
           title: 'Online Services', 
-          desc: 'How to enroll in classes',
-          to: '/courses'
-        },
-        { 
-          title: 'University Services', 
-          desc: 'Library, IT, and other resources',
-          to: '/university-services'
+          desc: 'Official university online websites',
+          to: '/service'
         },
         {
           title: 'Exams', 
-          desc: 'Library, IT, and other resources',
+          desc: 'Exam schedules, rules and regulations',
           to: '/university-services'
+        },
+        { 
+          title: 'Relevant Links', 
+          desc: 'Useful links for students',
+          to: '/links'
         }
       ],
       accomodationLinks: [

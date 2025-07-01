@@ -1,18 +1,13 @@
 <template>
-  <div class="container-fluid">
+  <div class="app">
     <AppNavbar />
-    <div class="container-sm w-75 h-75%">
+    <div class="container-sm w-75 h-75% my-5">
       <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Residence Registration (Anmeldung)</h1>
         </div>
-        <div class="col-3">
-        <router-link to="/first" class="btn btn-outline-secondary ">
-          ← Back to Previous Page
-        </router-link>
-        </div>
       </div>
-  <div class="row mb-5">
+  <div class="row mb-4">
   <h5 class="text-start">Everyone who moves to Germany must register at their new place of residence within 14 days. If the city administration does not provide any appointments within 14 days, please schedule the earliest possible appointment. </h5>
   </div>
   <dl class="row">
