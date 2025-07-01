@@ -13,8 +13,8 @@
       </BannerGermany>
     </div>
 
-    <div class="container-fluid">
-      <div class="requirements-container">
+
+    <div class="container-sm w-50 my-5">
         <dl class="row">
           <dt class="col-sm-3 text-start">Duisburg</dt>
           <dd class="col-sm-9 text-start">
@@ -45,6 +45,7 @@
             </ul>
           </dd>
         </dl>
+      </div>
 
         <section class="d-flex justify-content-between py-4 mb-4">
           <router-link to="/visa" class="btn btn-outline-secondary">
@@ -54,12 +55,9 @@
             Health Insurance &gt;
           </router-link>
         </section>
-      </div>
-    </div>
 
-    <section class="contacts-section py-5">
       <UniversityContacts />
-    </section>
+
   </div>
 </template>
 
@@ -78,11 +76,7 @@ export default {
 </script>
 
 <style scoped>
-.requirements-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
+
 
 .contacts-section {
   background-color: #005293;
