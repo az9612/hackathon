@@ -1,86 +1,107 @@
 <template>
-  <div class="app">
+  <div>
     <AppNavbar />
-    <div class="container-sm w-75 h-75% my-5">
-      <div class="row mb-4">
-        <div class="col-9">
-          <h1 class="display-5 text-start">Visa Application</h1>
-        </div>
-      </div>
-
-      <div class="row mb-4">
-        <h5 class="text-start">
-          International students are required to apply for a visa/residence permit after arrival. Below are important contacts and procedures depending on your city of residence.
-        </h5>
-      </div>
-
-      <dl class="row">
-        <dt class="col-sm-3 text-start">Duisburg</dt>
-        <dd class="col-sm-9 text-start">
-          Fill in the online application at the 
-          <a href="https://www.duisburg.de/allgemein/fachbereiche/33/online-antraege-der-auslaenderbehoerde.php#/#bueOverview" target="_blank">
-            Foreign's office website
-          </a>. UDE students can also contact the Immigration Office Duisburg directly every second Tuesday via this 
-          <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MzAwNzQ0NGItMDY5Yi00YmUxLWE1MTUtMTMwYjQxYjY3NjE3%40thread.v2/0?context=%7b%22Tid%22%3a%221fe81f8a-14a2-4f29-a738-2f3ffcb77915%22%2c%22Oid%22%3a%22d6cbd25d-e7c0-47f9-840d-98c68132ce64%22%7d" target="_blank">link</a>.
-          Contact Talent Center via: <span class="text-primary">talent-center@stadt-duisburg.de</span>
-        </dd>
-
-        <dt class="col-sm-3 text-start">Essen</dt>
-        <dd class="col-sm-9 text-start">
-          Please schedule appointments via email: 
-          <span class="text-primary">studententermine@abh.essen.de</span>
-        </dd>
-
-        <dt class="col-sm-3 text-start">Mülheim an der Ruhr</dt>
-        <dd class="col-sm-9 text-start">
-          Please schedule appointments 
-          <a href="https://terminvergabe.muelheim-ruhr.de/select2?md=9" target="_blank">online</a>
-        </dd>
-
-        <dt class="col-sm-3 text-start">Typical Documents Needed</dt>
-        <dd class="col-sm-9 text-start">
-          Letter of Admission<br>
-          Proof of Financing<br>
-          Proof of Health Insurance<br>
-          Rental Agreement<br>
-          Letter of Tenancy (Wohnungsgeberbescheinigung)<br>
-          Passport<br>
-          Passport Photo
-        </dd>
-      </dl>
+    <div class="container-fluid mb-3">
+    <BannerGermany>
+      <template #title>
+        ALL QUESTIONS ABOUT THE GERMANY VISA, ANSWERED!
+      </template>
+      <template #description>
+        We're sure you'd love to explore this beautiful country. However, you'll need a 
+        <strong>Germany visa</strong> to enter. Below, we've answered some of the most common questions 
+        to guide you through the process.
+      </template>
+    </BannerGermany>
     </div>
-    <UniversityContacts />
+
+    <div class="container-fluid">
+      <div class="requirements-container">
+        <InfoSection :title="'Visa Appointment'" :items="visaItems" />
+
+        <section class="text-center py-4 mb-4">
+          <router-link to="/resireg" class="btn btn-outline-secondary">
+            Residence Registration ->
+          </router-link>
+        </section>
+      </div>
+    </div>
+    
+    <section class="contacts-section py-5">
+      <UniversityContacts />
+    </section>
   </div>
 </template>
 
 <script>
-import AppNavbar from './components/AppNavbar.vue';
-import UniversityContacts from './components/UniversityContacts.vue';
+import AppNavbar from './components/AppNavbar.vue'
+import BannerGermany from './components/BannerGermany.vue'
+import InfoSection from './components/InfoSection.vue'
+import UniversityContacts from './components/UniversityContacts.vue'
 
 export default {
   components: {
     AppNavbar,
+    BannerGermany,
+    InfoSection,
     UniversityContacts
+  },
+  data() {
+    return {
+      visaItems: [
+        {
+          title: 'Duisburg',
+          description: `
+            Fill in online application at the
+            <a href="https://www.duisburg.de/allgemein/fachbereiche/33/online-antraege-der-auslaenderbehoerde.php#/#bueOverview" target="_blank">Foreign's office website</a>.
+            UDE students can also contact the Immigration Office Duisburg every 2nd Tuesday via
+            <a href="https://teams.microsoft.com/l/meetup-join/..." target="_blank">this Teams link</a>.
+            Email: <span class="text-primary">talent-center@stadt-duisburg.de</span>.
+          `
+        },
+        {
+          title: 'Essen',
+          description: `Please schedule appointments via email:
+            <span class="text-primary">studententermine@abh.essen.de</span>`
+        },
+        {
+          title: 'Mülheim an der Ruhr',
+          description: `Please schedule appointments 
+            <a href="https://terminvergabe.muelheim-ruhr.de/select2?md=9" target="_blank">online</a>.`
+        },
+        {
+          title: 'Typical documents needed',
+          description: `
+            <ul>
+              <li>Letter of Admission</li>
+              <li>Proof of Financing</li>
+              <li>Proof of Health Insurance</li>
+              <li>Rental Agreement</li>
+              <li>Letter of tenancy (Wohnungsgeberbescheinigung)</li>
+              <li>Passport</li>
+              <li>Passport Photo</li>
+            </ul>
+          `
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style scoped>
-h1, h2 {
-  font-weight: 600;
-  color: #2c3e50;
-  text-align: left;
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: #fffefe; /* Only the content area should be white */
 }
 
-h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+.text-primary {
+  color: #007bff;
 }
 
-h2 {
-  font-size: 1.4rem;
-  margin: 2rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid #eee;
+.contacts-section {
+  background-color: #005293; /* Ensure the contacts section has the blue background */
+  margin-top: 2rem; /* Add some space between content and footer */
 }
 </style>
