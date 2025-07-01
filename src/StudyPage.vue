@@ -13,12 +13,12 @@
       <InfoCard 
         title="Einschreibung (Enrollment)"
         :steps="einschreibenSteps"
-        linkPath="/einschreibungPage"
+        linkPath="/enrol"
       />
       <InfoCard 
         title="Uni DUE Online Services"
         :steps="onlineServicesSteps"
-        linkPath="/onlineServicesPage"
+        linkPath="/service"
       />
       <InfoCard 
         title="Exams"
