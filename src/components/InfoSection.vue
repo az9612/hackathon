@@ -72,4 +72,7 @@ export default {
   }
 }
 </style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0

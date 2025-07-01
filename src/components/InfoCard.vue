@@ -7,7 +7,11 @@
         @click="isOpen = !isOpen"
         :class="{ 'collapsed': !isOpen }"
       >
+<<<<<<< HEAD
         <span class="title-text">{{ title }}</span>
+=======
+        {{ title }}
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
         <span class="accordion-icon">{{ isOpen ? '−' : '+' }}</span>
       </button>
     </h2>
@@ -50,6 +54,7 @@ export default {
 
 <style scoped>
 .accordion-item {
+<<<<<<< HEAD
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin-bottom: 12px;
@@ -58,6 +63,13 @@ export default {
   max-width: 800px; /* Controls column width */
   margin-left: auto;
   margin-right: auto;
+=======
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
 }
 
 .accordion-button {
@@ -70,13 +82,17 @@ export default {
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s;
+<<<<<<< HEAD
   text-align: left;
+=======
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
 }
 
 .accordion-button:hover {
   background-color: #e9ecef;
 }
 
+<<<<<<< HEAD
 .title-text {
   flex: 1;
   margin-right: 1rem;
@@ -89,6 +105,11 @@ export default {
   font-weight: bold;
   color: #555;
   flex-shrink: 0;
+=======
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
 }
 
 .accordion-collapse {
@@ -97,6 +118,7 @@ export default {
 
 .accordion-body {
   padding: 1rem 1.25rem;
+<<<<<<< HEAD
   text-align: left;
 }
 
@@ -105,6 +127,14 @@ export default {
   margin-bottom: 0;
   list-style-type: decimal;
   line-height: 1.6;
+=======
+}
+
+.steps-list {
+  padding-left: 20px;
+  margin-bottom: 0px;
+  text-align: left;
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
 }
 
 .btn-outline-primary {

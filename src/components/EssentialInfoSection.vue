@@ -39,22 +39,35 @@ export default {
         { 
           title: 'Residence Registration', 
           desc: 'Anmeldung process explained',
+<<<<<<< HEAD
           to: '/registration'
+=======
+          to: '/resireg'
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
         },
         { 
           title: 'Health Insurance', 
           desc: 'Mandatory for all students',
+<<<<<<< HEAD
           to: '/insurance'
+=======
+          to: '/health'
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
         },
         { 
           title: 'Bank Account', 
           desc: 'Opening a German account',
+<<<<<<< HEAD
           to: '/bank-account'
+=======
+          to: '/bank'
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
         }
       ],
       studyLinks: [
         { 
           title: 'Einschreiben', 
+<<<<<<< HEAD
           desc: 'Find student dorms and apartments',
           to: '/accommodation'
         },
@@ -72,6 +85,25 @@ export default {
           title: 'Exams', 
           desc: 'Library, IT, and other resources',
           to: '/university-services'
+=======
+          desc: 'Enrollment process for new students',
+          to: '/enrol'
+        },
+        { 
+          title: 'Online Services', 
+          desc: 'Official university online websites',
+          to: '/service'
+        },
+        {
+          title: 'Exams', 
+          desc: 'Exam schedules, rules and regulations',
+          to: '/university-services'
+        },
+        { 
+          title: 'Relevant Links', 
+          desc: 'Useful links for students',
+          to: '/links'
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
         }
       ],
       accomodationLinks: [
@@ -140,4 +172,8 @@ export default {
     gap: 1rem;
   }
 }
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0

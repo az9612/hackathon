@@ -1,7 +1,11 @@
 <template>
   <div class="app">
     <AppNavbar />
+<<<<<<< HEAD
     <div class="container-fluid mb-3">
+=======
+    <div class="container-fluid mx-0 mb-3">
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
     <BannerGermany>
       <template #title>
         Residence Registration
@@ -13,7 +17,11 @@
     </BannerGermany>
     </div>
 
+<<<<<<< HEAD
     <div class="container-sm w-75 h-75% my-5">
+=======
+    <div class="container-sm w-50 my-5">
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
       <!-- <div class="row mb-4">
         <div class="col-9">
           <h1 class="display-5 text-start">Residence Registration (Anmeldung)</h1>
@@ -49,6 +57,7 @@
         Current certificate of enrolment <br>
     </dd>
   </dl> 
+<<<<<<< HEAD
 
      <section class="d-flex justify-content-between py-4 mb-4">
         <router-link to="/visa" class="btn btn-outline-secondary">
@@ -59,6 +68,8 @@
         </router-link>
       </section>
 
+=======
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
     </div>
     <UniversityContacts />
   </div>
@@ -104,4 +115,8 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
+<<<<<<< HEAD
 </style>
+=======
+</style>
+>>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0

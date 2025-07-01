@@ -4,7 +4,7 @@
     <div class="container-sm w-75">
       <div class="row mb-4">
         <div class="col-9">
-          <h1 class="display-5 text-start">Job Listings</h1>
+          <h1 class="display-5 text-start">Social Media</h1>
         </div>
         <div class="col-3">
         <router-link to="/study" class="btn btn-outline-secondary ">
@@ -13,13 +13,25 @@
         </div>
       </div>
   <div class="row mb-5">
-  <h5 class="text-start">In general, students are allowed to work up to 20 hours per week. Students can find various type of jobs online.</h5>
+  <h5 class="text-start"></h5>
   </div>
   <dl class="row">
+    <dt class="col-sm-3 text-start">University</dt>
+    <dd class="col-sm-9 text-start">
+      &#x2022; <a href="https://www.instagram.com/uni_duisburg_essen?igsh=MWFmNHFndW15ZTNmMA==" target="_blank">Instagram</a> <br>
+      &#x2022; <a href="https://www.tiktok.com/@unidue?_t=ZN-8xdiZNsGLKg&_r=1" target="_blank">TikTok</a> <br>
+    </dd>
 
-    <dt class="col-sm-12 text-start">&#x2022; <a href="https://www.uni-due.de/stellenmarkt/" target="_blank">Jobs at the University</a> <br></dt>
-    <dt class="col-sm-12 text-start">&#x2022; <a href="https://www.zenjob.com/de/" target="_blank">Zenjob-Flexible daily student jobs</a> <br></dt>
-    <dt class="col-sm-12 text-start">&#x2022; <a href="https://jobvalley.com/en-de/" target="_blank">Jobvalley-Flexible daily or long-term student jobs</a> <br></dt>
+    <dt class="col-sm-3 text-start">Faculty of Engineering</dt>
+    <dd class="col-sm-9 text-start">
+      &#x2022; <a href="http://www.instagram.com/fiw.ude/" target="_blank">Instagram</a> <br>
+      &#x2022; <a href="https://www.tiktok.com/@iw_ude" target="_blank">TikTok</a> <br>
+    </dd>
+
+    <dt class="col-sm-3 text-start">ISE Student Council</dt>
+    <dd class="col-sm-9 text-start">
+      &#x2022; <a href="http://www.instagram.com/fachschaft.ise/" target="_blank">Instagram</a> <br>
+    </dd>
     
   </dl> 
     </div>
@@ -62,8 +74,4 @@ h2 {
   border-bottom: 1px solid #eee;
 }
 
-<<<<<<< HEAD
 </style>
-=======
-</style>
->>>>>>> d9b05b971e98a3e5dbc6dd640ef800402a295ae0
