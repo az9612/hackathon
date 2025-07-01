@@ -1,10 +1,26 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import RegisterPage from '../Register.vue'
-import Home from '../Home.vue'
+
+// Pages
+import Home from '../HomePage.vue'
+import VisaApplication from '../VisaApplication.vue'
+import ResidenceReg from '../ResidenceReg.vue'
+import HealthIns from '../HealthIns.vue'
+import BankAcc from '../BankAcc.vue'
+import EnrolUni from '../EnrolUni.vue' import OnlineSer from '../OnlineSer.vue'
+import ExamInf from '../ExamInf.vue'
+import UseLink from '../UseLink.vue'
+import HouseStud from '../HouseStud.vue'
+import SocMed from '../SocMed.vue'
+import LivCit from '../LivCit.vue'
+import FindJob from '../FindJob.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/register', component: RegisterPage }
+  { name: 'Visa Application', path: '/visa', content: 'Apply for visa, documents, process', component: VisaApplication },
+  { name: 'Residence Registration', path: '/resireg', component: ResidenceReg, },
+  { name: 'Health Insurance' ,path: '/health', component: HealthIns},
+  { name: 'Bank Account', path: '/bank', component: BankAcc},
+  { name: 'Enrollment ',path: '/enrol', component: EnrolUni},
 ]
 
 const router = createRouter({
@@ -13,3 +29,4 @@ const router = createRouter({
 })
 
 export default router
+
