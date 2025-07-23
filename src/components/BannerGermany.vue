@@ -1,5 +1,5 @@
 <template>
-  <section class="visa-hero">
+  <div class="visa-hero mx-0">
     <div class="container-fluid">
       <div class="row justify-content-center align-items-center h-100">
         <div class="col-12 text-center">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -30,9 +30,8 @@ export default {
   color: #2c3e50;
   min-height: 380px;
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 4rem 0;
+  /* align-items: center; */
+  padding: 0;
   margin: 0;
 }
 
