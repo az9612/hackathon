@@ -13,7 +13,6 @@
     <EssentialInfoSection />
     <UniversityContacts />
     <ChatbotPopup />
-
   </div>
 </template>
 

@@ -219,11 +219,11 @@ export default {
   color: #6c757d;
 }
 
-.requirements-container {
+/* .requirements-container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
-}
+} */
 
 .contacts-section {
   background-color: #005293;
