@@ -163,7 +163,6 @@ export default {
   border-left: 4px solid #005293;
   height: 100%;
 }
-<<<<<<< HEAD
 
 .activity-image {
   max-height: 300px;
@@ -240,8 +239,6 @@ export default {
   background-color: #005293;
   color: white;
 }
-=======
->>>>>>> 7adbafed1a750e9d26ce860abbb912eb0afbced2
 
 .activity-image {
   max-height: 300px;
@@ -275,7 +272,6 @@ export default {
   color: #495057;
 }
 
-<<<<<<< HEAD
 dl {
   margin-top: 1rem;
 }
@@ -293,43 +289,5 @@ ul {
 .list-unstyled {
   padding-left: 0;
   list-style: none;
-=======
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #212529;
-  text-decoration: none;
-}
-
-.social-link:hover {
-  color: #005293;
-}
-
-.link-description {
-  font-size: 0.9rem;
-  color: #6c757d;
-}
-
-.bi {
-  font-size: 1.2rem;
-  color: #005293;
-}
-
-.contacts-section {
-  background-color: #005293;
-  margin-top: 2rem;
-}
-
-.btn-primary {
-  background-color: #005293;
-  border-color: #005293;
->>>>>>> 7adbafed1a750e9d26ce860abbb912eb0afbced2
 }
 </style>

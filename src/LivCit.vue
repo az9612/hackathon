@@ -128,6 +128,11 @@ export default {
 </script>
 
 <style scoped>
+.requirements-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 .social-section {
   background-color: #f8f9fa;
   border-left: 4px solid #005293;

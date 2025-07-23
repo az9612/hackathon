@@ -64,7 +64,7 @@ export default {
       fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer ",
+          "Authorization": "Bearer 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",
           "Content-Type": "application/json"
         },
       body: JSON.stringify({

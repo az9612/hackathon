@@ -14,7 +14,7 @@
     </div>
 
 
-    <div class="container-sm w-50 my-5">
+    <div class="container-fluid">
         <dl class="row">
           <dt class="col-sm-3 text-start">Duisburg</dt>
           <dd class="col-sm-9 text-start">
